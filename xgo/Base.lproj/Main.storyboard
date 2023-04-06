@@ -96,7 +96,7 @@
                                     <constraint firstAttribute="width" constant="40" id="DNm-4I-4G8"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="zs1"/>
+                                <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="backActionWithSerder:" destination="Ks0-Ub-z5V" eventType="touchUpInside" id="dxa-we-gaO"/>
                                 </connections>
@@ -108,7 +108,7 @@
                                     <constraint firstAttribute="width" constant="40" id="bV6-YJ-yPv"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="zs1"/>
+                                <state key="normal" image="tiaoshi"/>
                                 <connections>
                                     <action selector="settingActionWithSerder:" destination="Ks0-Ub-z5V" eventType="touchUpInside" id="X1w-Ul-ynr"/>
                                 </connections>
@@ -120,7 +120,7 @@
                                     <constraint firstAttribute="width" constant="40" id="eml-gj-7HO"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="zs1"/>
+                                <state key="normal" image="shuoming"/>
                                 <connections>
                                     <action selector="menuActionWithSerder:" destination="Ks0-Ub-z5V" eventType="touchUpInside" id="dHQ-kb-hia"/>
                                 </connections>
@@ -240,7 +240,7 @@
                                     <constraint firstAttribute="width" constant="40" id="ueM-yF-SVC"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="zs1"/>
+                                <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="backActionWithSerder:" destination="ZzL-st-gi8" eventType="touchUpInside" id="pnR-yv-UEj"/>
                                 </connections>
@@ -401,7 +401,7 @@
                                     <constraint firstAttribute="height" constant="40" id="Rps-Q3-vrt"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="zs1"/>
+                                <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="backActionWithSerder:" destination="gWB-LK-Tc4" eventType="touchUpInside" id="SzX-0v-tt4"/>
                                 </connections>
@@ -542,7 +542,7 @@
                                     <constraint firstAttribute="height" constant="40" id="VB8-Fp-k10"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="zs1"/>
+                                <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="backActionWithSerder:" destination="JB9-KJ-bEY" eventType="touchUpInside" id="8wT-eU-ERy"/>
                                 </connections>
@@ -560,7 +560,7 @@
                                     <constraint firstAttribute="height" constant="40" id="WLe-bx-kbh"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="zs1"/>
+                                <state key="normal" image="shezhi"/>
                                 <connections>
                                     <action selector="settingActionWithSerder:" destination="JB9-KJ-bEY" eventType="touchUpInside" id="7Rp-Vv-cdM"/>
                                 </connections>
@@ -575,7 +575,7 @@
                                             <constraint firstAttribute="height" constant="75" id="pJe-Ze-0hH"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="reset"/>
+                                        <state key="normal" title="Reset" image="reset"/>
                                         <connections>
                                             <action selector="restActionWithSerder:" destination="JB9-KJ-bEY" eventType="touchUpInside" id="KCl-1G-S3L"/>
                                         </connections>
@@ -659,7 +659,7 @@
                                     <constraint firstAttribute="width" constant="40" id="lGg-Gr-1D7"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="zs1"/>
+                                <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="backActionWithSerder:" destination="bi6-TO-6zR" eventType="touchUpInside" id="OaE-1C-fiS"/>
                                 </connections>
@@ -671,7 +671,7 @@
                                     <constraint firstAttribute="width" constant="40" id="i5g-3I-KA3"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="zs1"/>
+                                <state key="normal" image="shezhi"/>
                                 <connections>
                                     <action selector="settingActionWithSerder:" destination="bi6-TO-6zR" eventType="touchUpInside" id="Rv8-QL-Jn0"/>
                                 </connections>
@@ -894,7 +894,7 @@
                                     <constraint firstAttribute="height" constant="40" id="dK7-KX-see"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="zs1"/>
+                                <state key="normal" image="shezhi"/>
                                 <connections>
                                     <action selector="settingActionWithSerder:" destination="IKk-dT-rIW" eventType="touchUpInside" id="Khg-lg-gzu"/>
                                 </connections>
@@ -956,7 +956,7 @@
                                             <constraint firstAttribute="width" constant="24" id="pg6-27-s6l"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="zs1"/>
+                                        <state key="normal" image="chongzhi"/>
                                         <connections>
                                             <action selector="heightRestActionWithSerder:" destination="IKk-dT-rIW" eventType="touchUpInside" id="D6Y-1N-3oV"/>
                                         </connections>
@@ -968,7 +968,7 @@
                                             <constraint firstAttribute="height" constant="24" id="Sv5-t8-4t7"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="zs1"/>
+                                        <state key="normal" image="chongzhi"/>
                                         <connections>
                                             <action selector="rangeRestActionWithSerder:" destination="IKk-dT-rIW" eventType="touchUpInside" id="kdb-2a-gK5"/>
                                         </connections>
@@ -1315,17 +1315,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caf-tp-Gxc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="812" y="5625"/>
+            <point key="canvasLocation" x="840" y="4913"/>
         </scene>
     </scenes>
     <resources>
         <image name="1024" width="1024" height="1024"/>
+        <image name="back" width="35" height="35"/>
         <image name="biaoyan" width="225" height="225"/>
+        <image name="chongzhi" width="25" height="25"/>
         <image name="dian" width="150" height="36"/>
         <image name="qian" width="200" height="200"/>
         <image name="radiobuttonselect" width="16" height="16"/>
         <image name="radiobuttonunselect" width="16" height="16"/>
         <image name="reset" width="75" height="75"/>
+        <image name="shezhi" width="35" height="35"/>
+        <image name="shuoming" width="35" height="35"/>
+        <image name="tiaoshi" width="35" height="35"/>
         <image name="wdian" width="164" height="40"/>
         <image name="yaokong" width="225" height="225"/>
         <image name="youzhuan1" width="60" height="60"/>
