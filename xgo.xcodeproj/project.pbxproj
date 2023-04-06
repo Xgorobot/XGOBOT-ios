@@ -24,6 +24,12 @@
 		04E4E0F1299B7D56006C856C /* MenuShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E0F0299B7D56006C856C /* MenuShowView.swift */; };
 		04E4E0F3299B8195006C856C /* PerformanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E0F2299B8195006C856C /* PerformanceViewController.swift */; };
 		04E4E0F7299B82DF006C856C /* PerformanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4E0F6299B82DF006C856C /* PerformanceCell.swift */; };
+		0E64F1D329D87D7000AC46AE /* SocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64F1D229D87D7000AC46AE /* SocketClient.swift */; };
+		0E64F1D629D87E8100AC46AE /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64F1D529D87E8100AC46AE /* StringUtils.swift */; };
+		0E64F1D829D87F1000AC46AE /* AppValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64F1D729D87F1000AC46AE /* AppValues.swift */; };
+		0E64F1DA29D9564A00AC46AE /* XgoControlUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64F1D929D9564A00AC46AE /* XgoControlUtils.swift */; };
+		0EE2E7C529DD5321005E1CD4 /* NetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2E7C429DD5321005E1CD4 /* NetHelper.swift */; };
+		0EE2E7C729DD5669005E1CD4 /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2E7C629DD5669005E1CD4 /* WebSocketClient.swift */; };
 		DA9E1213D1BC99ABE2C07930 /* Pods_xgo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA2CC0AC979875082E40393 /* Pods_xgo.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +54,12 @@
 		04E4E0F2299B8195006C856C /* PerformanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceViewController.swift; sourceTree = "<group>"; };
 		04E4E0F6299B82DF006C856C /* PerformanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceCell.swift; sourceTree = "<group>"; };
 		0BA2CC0AC979875082E40393 /* Pods_xgo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xgo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E64F1D229D87D7000AC46AE /* SocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketClient.swift; sourceTree = "<group>"; };
+		0E64F1D529D87E8100AC46AE /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
+		0E64F1D729D87F1000AC46AE /* AppValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppValues.swift; sourceTree = "<group>"; };
+		0E64F1D929D9564A00AC46AE /* XgoControlUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XgoControlUtils.swift; sourceTree = "<group>"; };
+		0EE2E7C429DD5321005E1CD4 /* NetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetHelper.swift; sourceTree = "<group>"; };
+		0EE2E7C629DD5669005E1CD4 /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
 		D2AAA36D43FAD340C3C810F9 /* Pods-xgo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xgo.debug.xcconfig"; path = "Target Support Files/Pods-xgo/Pods-xgo.debug.xcconfig"; sourceTree = "<group>"; };
 		F1760F23A2DD1DF86A8651A1 /* Pods-xgo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xgo.release.xcconfig"; path = "Target Support Files/Pods-xgo/Pods-xgo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +97,9 @@
 		04E4E0CF299B22F0006C856C /* xgo */ = {
 			isa = PBXGroup;
 			children = (
+				0E64F1D429D87E2700AC46AE /* utils */,
+				0E64F1CF29D87D4600AC46AE /* socket */,
+				0E64F1CE29D87D3300AC46AE /* robot */,
 				04E4E0F5299B82B6006C856C /* View */,
 				04E4E0F4299B82A1006C856C /* Controller */,
 				04E4E0D0299B22F0006C856C /* AppDelegate.swift */,
@@ -93,6 +108,7 @@
 				04E4E0DB299B22F1006C856C /* LaunchScreen.storyboard */,
 				04E4E0DE299B22F1006C856C /* Info.plist */,
 				04E4E0E6299B25B0006C856C /* LoadNibable.swift */,
+				0E64F1D729D87F1000AC46AE /* AppValues.swift */,
 			);
 			path = xgo;
 			sourceTree = "<group>";
@@ -121,6 +137,32 @@
 				04208B57299DC74F0008C519 /* CenterStarSlider.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0E64F1CE29D87D3300AC46AE /* robot */ = {
+			isa = PBXGroup;
+			children = (
+				0E64F1D929D9564A00AC46AE /* XgoControlUtils.swift */,
+			);
+			path = robot;
+			sourceTree = "<group>";
+		};
+		0E64F1CF29D87D4600AC46AE /* socket */ = {
+			isa = PBXGroup;
+			children = (
+				0E64F1D229D87D7000AC46AE /* SocketClient.swift */,
+				0EE2E7C429DD5321005E1CD4 /* NetHelper.swift */,
+				0EE2E7C629DD5669005E1CD4 /* WebSocketClient.swift */,
+			);
+			path = socket;
+			sourceTree = "<group>";
+		};
+		0E64F1D429D87E2700AC46AE /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				0E64F1D529D87E8100AC46AE /* StringUtils.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 		3FD30B4A1A54A940B482739E /* Frameworks */ = {
@@ -259,12 +301,18 @@
 				04E04F95299C6C0900CF7482 /* RadioControllViewController.swift in Sources */,
 				04E4E0F7299B82DF006C856C /* PerformanceCell.swift in Sources */,
 				04E4E0EB299B30D0006C856C /* MainNavigationController.swift in Sources */,
+				0E64F1DA29D9564A00AC46AE /* XgoControlUtils.swift in Sources */,
 				04E4E0E9299B2F54006C856C /* InputAddressViewController.swift in Sources */,
+				0E64F1D829D87F1000AC46AE /* AppValues.swift in Sources */,
+				0E64F1D329D87D7000AC46AE /* SocketClient.swift in Sources */,
 				04E4E0D1299B22F0006C856C /* AppDelegate.swift in Sources */,
 				04E4E0EF299B7843006C856C /* MenuViewController.swift in Sources */,
+				0EE2E7C729DD5669005E1CD4 /* WebSocketClient.swift in Sources */,
 				04E4E0E7299B25B0006C856C /* LoadNibable.swift in Sources */,
 				04E4E0F3299B8195006C856C /* PerformanceViewController.swift in Sources */,
+				0E64F1D629D87E8100AC46AE /* StringUtils.swift in Sources */,
 				04E04F99299CC02300CF7482 /* PoseModelViewController.swift in Sources */,
+				0EE2E7C529DD5321005E1CD4 /* NetHelper.swift in Sources */,
 				04E4E0ED299B6622006C856C /* BaseSettingViewController.swift in Sources */,
 				04208B58299DC74F0008C519 /* CenterStarSlider.swift in Sources */,
 				04E4E0F1299B7D56006C856C /* MenuShowView.swift in Sources */,
@@ -416,7 +464,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZVAE795T6V;
+				DEVELOPMENT_TEAM = 224A4DARGK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = xgo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -446,7 +494,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZVAE795T6V;
+				DEVELOPMENT_TEAM = 224A4DARGK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = xgo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

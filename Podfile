@@ -7,5 +7,8 @@ target 'xgo' do
 
   # Pods for xgo
   pod 'SnapKit'
-  
+  pod 'Alamofire'
+  pod 'Starscream'
+  pod 'libSwiftSocket'
+
 end
