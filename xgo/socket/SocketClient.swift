@@ -21,7 +21,7 @@ class SocketClient: ChannelObserver{
         client.write(data: data.data(using: .utf8)!)
     }
     
-    func isConnected() -> Bool {
+    func isConnect() -> Bool {
         return isConnected
     }
     

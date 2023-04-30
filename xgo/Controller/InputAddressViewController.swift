@@ -24,13 +24,13 @@ class InputAddressViewController: UIViewController {
     }
     
     @IBAction func confirmButton(serder: UIButton) {
-//        let homeVC = HomeViewController.loadFromStoryboard("Main")
-//        self.navigationController?.pushViewController(homeVC, animated: true)
+        let homeVC = HomeViewController.loadFromStoryboard("Main")
+        self.navigationController?.pushViewController(homeVC, animated: true)
 
 //        NetHelper().makeLogon()
 //        
-        SOCKETMANAGER = SocketClient()
-        SOCKETMANAGER?.connect()
+//        SOCKETMANAGER = SocketClient()
+//        SOCKETMANAGER?.connect()
     }
     
 }
