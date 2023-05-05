@@ -29,8 +29,8 @@ class InputAddressViewController: UIViewController {
 
 //        NetHelper().makeLogon()
 //        
-//        SOCKETMANAGER = SocketClient()
-//        SOCKETMANAGER?.connect()
+        SOCKETMANAGER = SocketClient()
+        SOCKETMANAGER?.connect(host: "192.168.201.146")
     }
     
 }

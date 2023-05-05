@@ -12,7 +12,7 @@ class SocketClient: ChannelObserver{
     var client: ClientChannel!
     var isConnected = false
 
-    func connect(){
+    func connect(host:String){
         client = ClientChannel(observer: self)
         client.connect(host: "192.168.201.146", port: 6066)
     }
