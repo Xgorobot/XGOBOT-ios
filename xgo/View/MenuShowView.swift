@@ -16,7 +16,6 @@ class MenuShowView: UIView {
     
     //各个按钮对应的 RobotFunction.showMode(state)   {1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21 ,20 , 24, 23, 22}
     
-    
     override class func awakeFromNib() {
         super.awakeFromNib()
     }

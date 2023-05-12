@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RadioControllSettingViewController: UIViewController {
+class RadioControllSettingViewController: BaseViewController {
     
     @IBOutlet weak var modleLabel: UILabel!
     @IBOutlet weak var speedLabel: UILabel!
@@ -15,9 +15,13 @@ class RadioControllSettingViewController: UIViewController {
     @IBOutlet weak var rangeLabel: UILabel!
     @IBOutlet weak var heightValue: UILabel!
     @IBOutlet weak var rangeValue: UILabel!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.selected)
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.normal)
+
     }
     
     @IBAction func settingAction(serder: UIButton) {

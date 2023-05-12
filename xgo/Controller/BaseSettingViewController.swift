@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseSettingViewController: UIViewController {
+class BaseSettingViewController: BaseViewController {
     
     @IBOutlet weak var equipmentInfo: UILabel!
     

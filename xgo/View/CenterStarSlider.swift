@@ -77,6 +77,7 @@ class CenterStarSlider: UIControl {
         // 扩大手势范围
         let tempTouchPoint = CGRect(x: self.imageView.frame.origin.x - (self.imageView.frame.width / 1.5), y: self.frame.origin.y, width: self.imageView.frame.width * 3, height: self.frame.height)
         if tempTouchPoint.contains(point) {
+            print(11111111)
             isSlide = true
         }
         return isSlide
@@ -107,6 +108,18 @@ class CenterStarSlider: UIControl {
     
     override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
         isSlide = false
+        let point = touch?.location(in: self)
+        if (point?.x ?? 0.0) < self.center.x {
+            print(-fillLine.frame.width)
+        } else {
+            print(fillLine.frame.width)
+        }
+        
+    }
+    
+    func reset() {
+        imageView.center = self.center
+        fillLine.frame = CGRect(x: self.center.x - (fillLineHeight / 2), y: self.center.y - (fillLineHeight / 2), width: 0, height: fillLineHeight)
     }
     
     required init?(coder: NSCoder) {

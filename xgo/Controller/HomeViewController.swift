@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     
     @IBOutlet weak var performanceView: UIView!
     @IBOutlet weak var radioControllView: UIView!
@@ -52,5 +52,7 @@ class HomeViewController: UIViewController {
         let menuVC = MenuViewController.loadFromStoryboard("Main")
         self.navigationController?.pushViewController(menuVC, animated: true)
     }
+    
+    
     
 }

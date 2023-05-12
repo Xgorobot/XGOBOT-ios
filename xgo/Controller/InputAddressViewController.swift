@@ -7,15 +7,16 @@
 
 import UIKit
 
-class InputAddressViewController: UIViewController {
+class InputAddressViewController: BaseViewController {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var confirmButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        confirmButton.layer.cornerRadius = 12.5
+        confirmButton.layer.cornerRadius = 17.5
         confirmButton.layer.masksToBounds = true
+        confirmButton.setHorizontalGradientBackground(colorLeft: UIColor(hexString: "#3E67F7")!, colorRight: UIColor(hexString: "#349AFF")!, forState: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,5 +33,7 @@ class InputAddressViewController: UIViewController {
         SOCKETMANAGER = SocketClient()
         SOCKETMANAGER?.connect(host: "192.168.201.146")
     }
+    
+    
     
 }

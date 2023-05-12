@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PerformanceViewController: UIViewController {
+class PerformanceViewController: BaseViewController {
     
     var array = ["趴下","站起","匍匐前进","转圈","蹲起","转动Roll","转动Pitch","转动Yaw","3轴联动","撒尿","坐下","招手","伸懒腰","波浪","摇摆","乞求","找食物","握手","俯卧撑","鸡头","调皮","跳舞","张望"]
     @IBOutlet weak var contentView: UIView!

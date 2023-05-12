@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PoseModelViewController: UIViewController {
+class PoseModelViewController: BaseViewController {
     
     @IBOutlet weak var xAxisLabel: UILabel!
     @IBOutlet weak var yAxisLabel: UILabel!
@@ -22,6 +22,7 @@ class PoseModelViewController: UIViewController {
     @IBOutlet weak var xAxisRollContent: UIView!
     @IBOutlet weak var yAxisRollContent: UIView!
     @IBOutlet weak var zAxisRollContent: UIView!
+    @IBOutlet weak var resetButton: UIButton!
     
     fileprivate var xAxisSlider: CenterStarSlider!
     fileprivate var yAxisSlider: CenterStarSlider!
@@ -30,6 +31,8 @@ class PoseModelViewController: UIViewController {
     fileprivate var yAxisRollSlider: CenterStarSlider!
     fileprivate var zAxisRollSlider: CenterStarSlider!
     
+    @IBOutlet weak var widthView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
@@ -37,30 +40,34 @@ class PoseModelViewController: UIViewController {
     
     func initView() {
         
-        xAxisSlider = CenterStarSlider(frame: xAxisContent.bounds)
+        xAxisSlider = CenterStarSlider(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.4 * 0.88, height: 30))
         xAxisSlider.fillLineColor = UIColor.orange
         xAxisContent.addSubview(xAxisSlider)
         
-        yAxisSlider = CenterStarSlider(frame: yAxisContent.bounds)
+        yAxisSlider = CenterStarSlider(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.4 * 0.88, height: 30))
         yAxisSlider.fillLineColor = UIColor.green
         yAxisContent.addSubview(yAxisSlider)
         
-        zAxisSlider = CenterStarSlider(frame: zAxisContent.bounds)
+        zAxisSlider = CenterStarSlider(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.4 * 0.88, height: 30))
         zAxisSlider.fillLineColor = UIColor.blue
         zAxisContent.addSubview(zAxisSlider)
         
-        xAxisRollSlider = CenterStarSlider(frame: xAxisRollContent.bounds)
+        xAxisRollSlider = CenterStarSlider(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.4 * 0.88, height: 30))
         xAxisRollSlider.fillLineColor = UIColor.orange
         xAxisRollContent.addSubview(xAxisRollSlider)
         
-        yAxisRollSlider = CenterStarSlider(frame: yAxisRollContent.bounds)
+        yAxisRollSlider = CenterStarSlider(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.4 * 0.88, height: 30))
         yAxisRollSlider.fillLineColor = UIColor.green
         yAxisRollContent.addSubview(yAxisRollSlider)
         
-        zAxisRollSlider = CenterStarSlider(frame: zAxisRollContent.bounds)
+        zAxisRollSlider = CenterStarSlider(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.4 * 0.88, height: 30))
         zAxisRollSlider.fillLineColor = UIColor.blue
         zAxisRollContent.addSubview(zAxisRollSlider)
         
+        
+        resetButton.layer.cornerRadius = 17.5
+        resetButton.layer.masksToBounds = true
+        resetButton.setHorizontalGradientBackground(colorLeft: UIColor(hexString: "#3E67F7")!, colorRight: UIColor(hexString: "#349AFF")!, forState: .normal)
         
     }
     
@@ -78,4 +85,12 @@ class PoseModelViewController: UIViewController {
         self.view.isHidden = true
     }
     
+    @IBAction func resetButton(_ sender: Any) {
+        xAxisSlider.reset()
+        yAxisSlider.reset()
+        zAxisSlider.reset()
+        xAxisRollSlider.reset()
+        yAxisRollSlider.reset()
+        zAxisRollSlider.reset()
+    }
 }
