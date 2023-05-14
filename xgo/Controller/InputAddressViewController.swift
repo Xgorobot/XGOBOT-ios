@@ -31,13 +31,15 @@ class InputAddressViewController: BaseViewController,ChannelObserver {
         
         //        NetHelper().makeLogon()
         //
-        if isValidIPAddress(textField.text!){
-            SOCKETMANAGER = SocketClient()
-            SOCKETMANAGER?.setObserver(observer: self)
-            SOCKETMANAGER?.connect(host: textField.text!)
-        }else{
-            showError("The IP address you entered is not valid.")
-        }
+//        if isValidIPAddress(textField.text!){
+//            SOCKETMANAGER = SocketClient()
+//            SOCKETMANAGER?.setObserver(observer: self)
+//            SOCKETMANAGER?.connect(host: textField.text!)
+//        }else{
+//            showError("The IP address you entered is not valid.")
+//        }
+        let homeVC = HomeViewController.loadFromStoryboard("Main")
+        self.navigationController?.pushViewController(homeVC, animated: true)
     }
     
     func isValidIPAddress(_ ipAddress: String) -> Bool {

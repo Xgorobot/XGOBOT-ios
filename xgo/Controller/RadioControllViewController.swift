@@ -10,6 +10,8 @@ import WebKit
 
 class RadioControllViewController: BaseViewController {
     
+    @IBOutlet weak var noLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var directionButton: UIButton!
@@ -35,8 +37,9 @@ class RadioControllViewController: BaseViewController {
         
         poseModelVC.view.isHidden = true
         
-        webView.load(URLRequest(url: URL(string: "https://www.baidu.com")!))
+        webView.isHidden = true
         
+        motionButton.setHorizontalGradientBackground(colorLeft: UIColor(hexString: "#3E67F7")!, colorRight: UIColor(hexString: "#349AFF")!, forState: .normal)
         
         leftButton.setBackgroundImage(UIImage(named: "zuozhuan"), for: .normal)
         leftButton.setBackgroundImage(UIImage(named: "zuozhuan1"), for: .selected)
@@ -45,13 +48,13 @@ class RadioControllViewController: BaseViewController {
         rightButton.setBackgroundImage(UIImage(named: "youzhuan1"), for: .selected)
         
         trotButton.setBackgroundImage(UIImage(named: "wdian"), for: .normal)
-        trotButton.setBackgroundImage(UIImage(named: "dian"), for: .selected)
+        trotButton.setBackgroundImage(UIImage(named: "dian-1"), for: .selected)
         
         walkButton.setBackgroundImage(UIImage(named: "wdian"), for: .normal)
-        walkButton.setBackgroundImage(UIImage(named: "dian"), for: .selected)
+        walkButton.setBackgroundImage(UIImage(named: "dian-1"), for: .selected)
         
         grabButton.setBackgroundImage(UIImage(named: "wdian"), for: .normal)
-        grabButton.setBackgroundImage(UIImage(named: "dian"), for: .selected)
+        grabButton.setBackgroundImage(UIImage(named: "dian-1"), for: .selected)
         
         upButton.setBackgroundImage(UIImage(named: "zs"), for: .normal)
         upButton.setBackgroundImage(UIImage(named: "zs1"), for: .selected)
@@ -62,6 +65,16 @@ class RadioControllViewController: BaseViewController {
         downButton.setBackgroundImage(UIImage(named: "zx"), for: .normal)
         downButton.setBackgroundImage(UIImage(named: "zx1"), for: .selected)
         
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageViewClick)))
+        
+    }
+    
+    @objc func imageViewClick() {
+        imageView.isHidden = true
+        noLabel.isHidden = true
+        webView.isHidden = false
+        webView.load(URLRequest(url: URL(string: "https://www.baidu.com")!))
     }
     
     @IBAction func motionAction(serder: UIButton!) {
