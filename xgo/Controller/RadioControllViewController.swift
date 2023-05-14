@@ -48,10 +48,10 @@ class RadioControllViewController: BaseViewController {
         rightButton.setBackgroundImage(UIImage(named: "youzhuan1"), for: .highlighted)
         
         trotButton.setBackgroundImage(UIImage(named: "wdian"), for: .normal)
-        trotButton.setBackgroundImage(UIImage(named: "dian-1"), for: .selected)
+        trotButton.setBackgroundImage(UIImage(named: "dian-1"), for: .highlighted)
         
         walkButton.setBackgroundImage(UIImage(named: "wdian"), for: .normal)
-        walkButton.setBackgroundImage(UIImage(named: "dian-1"), for: .selected)
+        walkButton.setBackgroundImage(UIImage(named: "dian-1"), for: .highlighted)
         
         grabButton.setBackgroundImage(UIImage(named: "wdian"), for: .normal)
         grabButton.setBackgroundImage(UIImage(named: "dian-1"), for: .selected)
@@ -68,11 +68,13 @@ class RadioControllViewController: BaseViewController {
         imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageViewClick)))
         
+        directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
+        
     }
     
     @objc func imageViewClick() {
         imageView.isHidden = true
-        noLabel.isHidden = true
+//        noLabel.isHidden = true
         webView.isHidden = false
         webView.load(URLRequest(url: RobotFunction.getWebUrl()))
     }
@@ -110,6 +112,38 @@ class RadioControllViewController: BaseViewController {
         }else{
             RobotFunction.btnControl(direction: 0)
         }
+    }
+    
+    @IBAction func topTDDirection(_ sender: UIButton) {
+        directionButton.setBackgroundImage(UIImage(named: "qian"), for: .normal)
+    }
+    
+    @IBAction func topTUDirection(_ sender: UIButton) {
+        directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
+    }
+    
+    @IBAction func leftTDDirection(_ sender: UIButton) {
+        directionButton.setBackgroundImage(UIImage(named: "zuo"), for: .normal)
+    }
+    
+    @IBAction func leftTUDirection(_ sender: UIButton) {
+        directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
+    }
+    
+    @IBAction func rightTDDirection(_ sender: UIButton) {
+        directionButton.setBackgroundImage(UIImage(named: "you"), for: .normal)
+    }
+    
+    @IBAction func rightTUDirection(_ sender: UIButton) {
+        directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
+    }
+    
+    @IBAction func bottomTDDirection(_ sender: UIButton) {
+        directionButton.setBackgroundImage(UIImage(named: "hou"), for: .normal)
+    }
+    
+    @IBAction func bottomTUDirection(_ sender: UIButton) {
+        directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
     }
     
     @IBAction func trotAction(serder: UIButton) {
