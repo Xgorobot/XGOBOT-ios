@@ -35,7 +35,7 @@ class RadioControllViewController: BaseViewController {
         
         poseModelVC.view.isHidden = true
         
-        webView.load(URLRequest(url: URL(string: "https://www.baidu2.com")!))
+        webView.load(URLRequest(url: RobotFunction.getWebUrl()))
         
         
         leftButton.setBackgroundImage(UIImage(named: "zuozhuan"), for: .normal)
@@ -68,36 +68,47 @@ class RadioControllViewController: BaseViewController {
         
     }
     
+    @IBAction func leftTD(_ sender: UIButton) {
+        RobotFunction.btnControl(direction: 5)
+    }
+    
+    @IBAction func leftTU(_ sender: UIButton) {
+        RobotFunction.btnControl(direction: 0)
+    }
+    
+    @IBAction func rightTD(_ sender: Any) {
+        RobotFunction.btnControl(direction: 6)
+    }
+    
+    @IBAction func rightTU(_ sender: Any) {
+        RobotFunction.btnControl(direction: 0)
+    }
+    
+    
     @IBAction func poseAction(serder: UIButton) {
         poseModelVC.view.isHidden = false
     }
     
-    @IBAction func leftAction(serder: UIButton) {
-        if serder.isHighlighted{
-            RobotFunction.btnControl(direction: 5)
-        }else{
-            RobotFunction.btnControl(direction: 0)
-        }
-    }
-    
-    @IBAction func rightAction(serder: UIButton) {
-        serder.isSelected = !serder.isSelected
-    }
     
     @IBAction func directionAction(serder: UIButton) {
         if serder.isHighlighted{
             RobotFunction.btnControl(direction: 1)
+            //direction：0=停止，1=向前，2=向后，3=向左，4=向右，5=左旋，6=右旋
         }else{
             RobotFunction.btnControl(direction: 0)
         }
     }
     
     @IBAction func trotAction(serder: UIButton) {
-        serder.isSelected = !serder.isSelected
+        trotButton.isHighlighted = true
+        walkButton.isHighlighted = false
+        RobotFunction.setStepState(state: 0)
     }
     
     @IBAction func walkAction(serder: UIButton) {
-        serder.isSelected = !serder.isSelected
+        trotButton.isHighlighted = false
+        walkButton.isHighlighted = true
+        RobotFunction.setStepState(state: 1)
     }
     
     @IBAction func grab(serder: UIButton) {
@@ -118,7 +129,6 @@ class RadioControllViewController: BaseViewController {
     }
     
     @IBAction func settingAction(serder: UIButton) {
-        
         let setVC = RadioControllSettingViewController.loadFromStoryboard("Main")
         setVC.modalPresentationStyle = .overCurrentContext
         self.present(setVC, animated: false)

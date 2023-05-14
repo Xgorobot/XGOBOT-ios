@@ -16,12 +16,14 @@ class RadioControllSettingViewController: BaseViewController {
     @IBOutlet weak var heightValue: UILabel!
     @IBOutlet weak var rangeValue: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var heightSlider: UISlider!
+    @IBOutlet weak var setpSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.selected)
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.normal)
-
+        
     }
     
     @IBAction func settingAction(serder: UIButton) {
@@ -34,24 +36,42 @@ class RadioControllSettingViewController: BaseViewController {
     
     @IBAction func speedAction(serder: UISegmentedControl) {
         print(serder.selectedSegmentIndex)
+        switch serder.selectedSegmentIndex {
+        case 0:
+            RobotFunction.setSpeed(speed: 1)
+        case 1:
+            RobotFunction.setSpeed(speed: 2)
+        case 2:
+            RobotFunction.setSpeed(speed: 3)
+        default:
+            RobotFunction.setSpeed(speed:3)
+        }
     }
     
     @IBAction func heightAction(serder: UISlider) {
-        print(serder.value)
+        print(Int(serder.value))
         heightValue.text = "\(Int(serder.value))"
+        RobotFunction.heightControl(height: 75 + Int(serder.value) * 2 / 5)
     }
     
     @IBAction func rangeAction(serder: UISlider) {
         print(serder.value)
         rangeValue.text = "\(Int(serder.value))"
+        RobotFunction.setStepLength(length: Int(serder.value))
     }
     
     @IBAction func heightRestAction(serder: UIButton) {
-        
+        heightSlider.value = 60
+        heightSlider.setValue(60, animated: false)
+        heightValue.text = "60"
+        RobotFunction.heightControl(height: 75 + 60 * 2 / 5)
     }
     
     @IBAction func rangeRestAction(serder: UIButton) {
-        
+        setpSlider.value = 60
+        setpSlider.setValue(60, animated: false)
+        rangeValue.text = "60"
+        RobotFunction.setStepLength(length: 60)
     }
     
 }

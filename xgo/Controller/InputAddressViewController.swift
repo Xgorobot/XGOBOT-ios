@@ -72,6 +72,5 @@ class InputAddressViewController: BaseViewController,ChannelObserver {
     }
     
     func channel(_ client: libSwiftSocket.ClientChannel, didWrite buffer: libSwiftSocket.ByteBuffer, userInfo: [String : Any]?) {
-        
     }
 }

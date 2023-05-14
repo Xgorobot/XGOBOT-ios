@@ -58,6 +58,8 @@ class SocketClient: ChannelObserver{
     }
     
     func channelHeartBeat(_ client: ClientChannel) {
-        client.write(data: "heart beat\n".data(using: .utf8)!)
+        let datas: [UInt8] = [0x01, 0x00]
+        let sendData = DataHelper.getSendBytes(id: RobotConstants.TYPE_DEFAULT, funcName: RobotConstants.GET_POWER, data: datas)
+        sendMsg(data: sendData)
     }
 }
