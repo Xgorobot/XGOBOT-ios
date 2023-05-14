@@ -10,6 +10,7 @@ import UIKit
 class PerformanceViewController: BaseViewController {
     
     var array = ["趴下","站起","匍匐前进","转圈","蹲起","转动Roll","转动Pitch","转动Yaw","3轴联动","撒尿","坐下","招手","伸懒腰","波浪","摇摆","乞求","找食物","握手","俯卧撑","鸡头","调皮","跳舞","张望"]
+    private var action: [Int] = [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 20, 24, 23, 22]
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var switchButton: UISwitch!
     var collectionView: UICollectionView!
@@ -56,12 +57,11 @@ class PerformanceViewController: BaseViewController {
 }
 
 extension PerformanceViewController: UICollectionViewDelegate {
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         isSelectIndex = indexPath.row
+        RobotFunction.showMode(state: action[indexPath.row])
         self.collectionView.reloadData()
     }
-    
 }
 
 extension PerformanceViewController: UICollectionViewDataSource {
