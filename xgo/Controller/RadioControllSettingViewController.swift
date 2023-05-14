@@ -23,7 +23,10 @@ class RadioControllSettingViewController: BaseViewController {
         super.viewDidLoad()
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.selected)
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.normal)
-        
+        heightSlider.value = 60
+        setpSlider.value = 60
+        heightValue.text = "60"
+        rangeValue.text = "60"
     }
     
     @IBAction func settingAction(serder: UIButton) {
@@ -32,6 +35,7 @@ class RadioControllSettingViewController: BaseViewController {
     
     @IBAction func modelAction(serder: UISwitch) {
         print(serder.isOn)
+        RobotFunction.autoBalance(enable: serder.isOn)
     }
     
     @IBAction func speedAction(serder: UISegmentedControl) {

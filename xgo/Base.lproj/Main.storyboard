@@ -917,7 +917,7 @@
                                         <color key="textColor" red="0.54663020370000004" green="0.64249151950000005" blue="0.77889400720000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sWz-1k-pHz">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sWz-1k-pHz">
                                         <rect key="frame" x="272" y="13" width="51" height="31"/>
                                         <connections>
                                             <action selector="modelActionWithSerder:" destination="IKk-dT-rIW" eventType="valueChanged" id="iGa-gM-nYM"/>
@@ -1075,7 +1075,7 @@
                     </view>
                     <connections>
                         <outlet property="heightLabel" destination="Dwf-2R-QoB" id="iWN-cR-AVh"/>
-                        <outlet property="heightSlider" destination="61u-Db-9pt" id="nWf-b4-Ezp"/>
+                        <outlet property="heightSlider" destination="uno-Dl-8EZ" id="4gm-il-kb1"/>
                         <outlet property="heightValue" destination="h18-pt-KSz" id="PXR-IY-QLx"/>
                         <outlet property="modleLabel" destination="Ek4-BD-VVa" id="DY4-A9-dao"/>
                         <outlet property="rangeLabel" destination="XRr-CA-Tc5" id="Xwa-LQ-tK7"/>
