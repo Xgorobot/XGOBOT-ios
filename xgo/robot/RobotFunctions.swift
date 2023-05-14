@@ -32,10 +32,10 @@ public class RobotFunction {
     }
 
     //遥控界面中间的webview视频地址
-    public static func getWebUrl() -> String {
+    public static func getWebUrl() -> URL {
         let hostIp = UserDefaultsManager.shared.host
         let cameraPort = UserDefaultsManager.shared.cameraPort
-        return "\(hostIp ?? "172.0.0.1"):\(cameraPort)/video_feed"
+        return URL(string: "\(hostIp ?? "172.0.0.1"):\(cameraPort)/video_feed")!
     }
 
     //陀螺仪开关 遥控页面右上角设置菜单里有
