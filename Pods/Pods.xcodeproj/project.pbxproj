@@ -244,11 +244,11 @@
 		9417E0055848DA698290466F78C8421A /* URLConvertible+URLRequestConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLConvertible+URLRequestConvertible.swift"; path = "Source/URLConvertible+URLRequestConvertible.swift"; sourceTree = "<group>"; };
 		94315D9BD28872B271043AA13AAAEA82 /* ConstraintMakerRelatable+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintMakerRelatable+Extensions.swift"; path = "Sources/ConstraintMakerRelatable+Extensions.swift"; sourceTree = "<group>"; };
 		96A027771A5DEC09C495815DE363357A /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Sources/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
-		979486118B3E90C08386079D57962701 /* SnapKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		979486118B3E90C08386079D57962701 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98031527731074EE50C6D957606309AF /* Concurrency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Concurrency.swift; path = Source/Concurrency.swift; sourceTree = "<group>"; };
 		984DD33E2133F36E591B2987C5CDF759 /* Pods-xgo */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-xgo"; path = Pods_xgo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9987A1C08D068FF2803C0D7E3FDCDE49 /* Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.debug.xcconfig; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A42009C7A227F2E578A8148F71A134B2 /* RequestTaskMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestTaskMap.swift; path = Source/RequestTaskMap.swift; sourceTree = "<group>"; };
 		A70C4401DC33ADE5CA6C3DC891016F48 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Sources/ConstraintAttributes.swift; sourceTree = "<group>"; };
 		AA26782C7ADBDBEBF614F3C0E6B2FC04 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
@@ -428,7 +428,6 @@
 				C727EDF12D172DC6444DD5C39D5E4DBE /* UILayoutSupport+Extensions.swift */,
 				AFC9AB7B5989660D2B2432519B82F23E /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -438,7 +437,7 @@
 				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
 				B4C96233E6A8BABAFB5C67FDF860FCDA /* libSwiftSocket */,
 				984DD33E2133F36E591B2987C5CDF759 /* Pods-xgo */,
-				979486118B3E90C08386079D57962701 /* SnapKit */,
+				979486118B3E90C08386079D57962701 /* SnapKit.framework */,
 				891B2270823847ED23F2ECFC28F935EC /* Starscream */,
 			);
 			name = Products;
@@ -450,7 +449,6 @@
 				7BCCAF2734C6A20637F9309C35195BF3 /* core */,
 				BB233279C8CDD65B3A824D5C37A8F633 /* Support Files */,
 			);
-			name = libSwiftSocket;
 			path = libSwiftSocket;
 			sourceTree = "<group>";
 		};
@@ -546,7 +544,6 @@
 				0D3DE36E061081D643A26361DC4C7B83 /* WSEngine.swift */,
 				32890C91E4288746AE57C3569C106842 /* Support Files */,
 			);
-			name = Starscream;
 			path = Starscream;
 			sourceTree = "<group>";
 		};
@@ -617,7 +614,6 @@
 				01DC0AAF668934BE7419A7FF0EEE13EB /* Validation.swift */,
 				C8CACF3E645FA8725B9EA9121BBA88DE /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -699,7 +695,7 @@
 			);
 			name = SnapKit;
 			productName = SnapKit;
-			productReference = 979486118B3E90C08386079D57962701 /* SnapKit */;
+			productReference = 979486118B3E90C08386079D57962701 /* SnapKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		80C809CF51378910FB0C246AB63B48EF /* Pods-xgo */ = {

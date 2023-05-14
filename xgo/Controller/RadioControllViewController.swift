@@ -10,6 +10,8 @@ import WebKit
 
 class RadioControllViewController: BaseViewController {
     
+    @IBOutlet weak var noLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var directionButton: UIButton!
@@ -35,8 +37,9 @@ class RadioControllViewController: BaseViewController {
         
         poseModelVC.view.isHidden = true
         
-        webView.load(URLRequest(url: RobotFunction.getWebUrl()))
+        webView.isHidden = true
         
+        motionButton.setHorizontalGradientBackground(colorLeft: UIColor(hexString: "#3E67F7")!, colorRight: UIColor(hexString: "#349AFF")!, forState: .normal)
         
         leftButton.setBackgroundImage(UIImage(named: "zuozhuan"), for: .normal)
         leftButton.setBackgroundImage(UIImage(named: "zuozhuan1"), for: .highlighted)
@@ -45,13 +48,13 @@ class RadioControllViewController: BaseViewController {
         rightButton.setBackgroundImage(UIImage(named: "youzhuan1"), for: .highlighted)
         
         trotButton.setBackgroundImage(UIImage(named: "wdian"), for: .normal)
-        trotButton.setBackgroundImage(UIImage(named: "dian"), for: .selected)
+        trotButton.setBackgroundImage(UIImage(named: "dian-1"), for: .highlighted)
         
         walkButton.setBackgroundImage(UIImage(named: "wdian"), for: .normal)
-        walkButton.setBackgroundImage(UIImage(named: "dian"), for: .selected)
+        walkButton.setBackgroundImage(UIImage(named: "dian-1"), for: .highlighted)
         
         grabButton.setBackgroundImage(UIImage(named: "wdian"), for: .normal)
-        grabButton.setBackgroundImage(UIImage(named: "dian"), for: .selected)
+        grabButton.setBackgroundImage(UIImage(named: "dian-1"), for: .selected)
         
         upButton.setBackgroundImage(UIImage(named: "zs"), for: .normal)
         upButton.setBackgroundImage(UIImage(named: "zs1"), for: .highlighted)
@@ -62,6 +65,18 @@ class RadioControllViewController: BaseViewController {
         downButton.setBackgroundImage(UIImage(named: "zx"), for: .normal)
         downButton.setBackgroundImage(UIImage(named: "zx1"), for: .highlighted)
         
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageViewClick)))
+        
+        directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
+        
+    }
+    
+    @objc func imageViewClick() {
+        imageView.isHidden = true
+//        noLabel.isHidden = true
+        webView.isHidden = false
+        webView.load(URLRequest(url: RobotFunction.getWebUrl()))
     }
     
     @IBAction func motionAction(serder: UIButton!) {
@@ -97,6 +112,38 @@ class RadioControllViewController: BaseViewController {
         }else{
             RobotFunction.btnControl(direction: 0)
         }
+    }
+    
+    @IBAction func topTDDirection(_ sender: UIButton) {
+        directionButton.setBackgroundImage(UIImage(named: "qian"), for: .normal)
+    }
+    
+    @IBAction func topTUDirection(_ sender: UIButton) {
+        directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
+    }
+    
+    @IBAction func leftTDDirection(_ sender: UIButton) {
+        directionButton.setBackgroundImage(UIImage(named: "zuo"), for: .normal)
+    }
+    
+    @IBAction func leftTUDirection(_ sender: UIButton) {
+        directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
+    }
+    
+    @IBAction func rightTDDirection(_ sender: UIButton) {
+        directionButton.setBackgroundImage(UIImage(named: "you"), for: .normal)
+    }
+    
+    @IBAction func rightTUDirection(_ sender: UIButton) {
+        directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
+    }
+    
+    @IBAction func bottomTDDirection(_ sender: UIButton) {
+        directionButton.setBackgroundImage(UIImage(named: "hou"), for: .normal)
+    }
+    
+    @IBAction func bottomTUDirection(_ sender: UIButton) {
+        directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
     }
     
     @IBAction func trotAction(serder: UIButton) {

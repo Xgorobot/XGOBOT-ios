@@ -9,6 +9,7 @@ import UIKit
 
 class PoseModelViewController: BaseViewController {
     
+    @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var xAxisLabel: UILabel!
     @IBOutlet weak var yAxisLabel: UILabel!
     @IBOutlet weak var zAxisLabel: UILabel!
@@ -39,6 +40,8 @@ class PoseModelViewController: BaseViewController {
     }
     
     func initView() {
+        
+        postButton.setHorizontalGradientBackground(colorLeft: UIColor(hexString: "#3E67F7")!, colorRight: UIColor(hexString: "#349AFF")!, forState: .normal)
         
         xAxisSlider = CenterStarSlider(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.4 * 0.88, height: 30))
         xAxisSlider.fillLineColor = UIColor.orange
