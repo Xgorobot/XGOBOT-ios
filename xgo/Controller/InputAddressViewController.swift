@@ -47,10 +47,12 @@ class InputAddressViewController: BaseViewController,ChannelObserver {
     }
     
     func showError(_ message: String){
-        let alertController = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
-        self.present(alertController, animated: true, completion: nil)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-            alertController.dismiss(animated: true, completion: nil)
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
+            self.present(alertController, animated: true, completion: nil)
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                alertController.dismiss(animated: true, completion: nil)
+            }
         }
     }
     

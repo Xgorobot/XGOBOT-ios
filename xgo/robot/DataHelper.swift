@@ -28,13 +28,8 @@ class DataHelper {
         bytes[bytes.count - 1] = add
         
         let resultString = bytesToHex(bytes)
-        let asciiBytes = Array(resultString.utf8)
-        var resultByte = [UInt8](repeating: 0, count: asciiBytes.count + 2)
-        resultByte[0] = START
-        asciiBytes.enumerated().forEach { resultByte[$0.offset + 1] = $0.element }
-        resultByte[resultByte.count - 1] = END
-        
-        return bytesToHex(resultByte)
+        return "$\(resultString)#"
+
     }
     
     class func bytesToHex(_ bytes: [UInt8]) -> String {

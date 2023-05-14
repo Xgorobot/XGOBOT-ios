@@ -38,7 +38,7 @@ class NetHelper{
     
     func socketLogon() {
         //https://echo.websocket.org
-        var request = URLRequest(url: URL(string: "ws://192.168.201.146:6066")!) //https://localhost:8080
+        var request = URLRequest(url: URL(string: "ws://192.168.201.146:6000")!) //https://localhost:8080
         request.timeoutInterval = 5
         var socket: WebSocket!
         socket = WebSocket(request: request)

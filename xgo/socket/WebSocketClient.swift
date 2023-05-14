@@ -15,7 +15,7 @@ class WebSocketClient:WebSocketDelegate{
     var socket: WebSocket!
     var isConnected = false
     let host = "192.168.31.82"
-    let port = 6066
+    let port = 6000
     
     // MARK: - WebSocketDelegate
     func didReceive(event: WebSocketEvent, client: WebSocket) {

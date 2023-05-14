@@ -35,14 +35,14 @@ class RadioControllViewController: BaseViewController {
         
         poseModelVC.view.isHidden = true
         
-        webView.load(URLRequest(url: URL(string: "https://www.baidu.com")!))
+        webView.load(URLRequest(url: URL(string: "https://www.baidu2.com")!))
         
         
         leftButton.setBackgroundImage(UIImage(named: "zuozhuan"), for: .normal)
-        leftButton.setBackgroundImage(UIImage(named: "zuozhuan1"), for: .selected)
+        leftButton.setBackgroundImage(UIImage(named: "zuozhuan1"), for: .highlighted)
         
         rightButton.setBackgroundImage(UIImage(named: "youzhuan"), for: .normal)
-        rightButton.setBackgroundImage(UIImage(named: "youzhuan1"), for: .selected)
+        rightButton.setBackgroundImage(UIImage(named: "youzhuan1"), for: .highlighted)
         
         trotButton.setBackgroundImage(UIImage(named: "wdian"), for: .normal)
         trotButton.setBackgroundImage(UIImage(named: "dian"), for: .selected)
@@ -54,13 +54,13 @@ class RadioControllViewController: BaseViewController {
         grabButton.setBackgroundImage(UIImage(named: "dian"), for: .selected)
         
         upButton.setBackgroundImage(UIImage(named: "zs"), for: .normal)
-        upButton.setBackgroundImage(UIImage(named: "zs1"), for: .selected)
+        upButton.setBackgroundImage(UIImage(named: "zs1"), for: .highlighted)
         
         middleButton.setBackgroundImage(UIImage(named: "zz"), for: .normal)
-        middleButton.setBackgroundImage(UIImage(named: "zz1"), for: .selected)
+        middleButton.setBackgroundImage(UIImage(named: "zz1"), for: .highlighted)
         
         downButton.setBackgroundImage(UIImage(named: "zx"), for: .normal)
-        downButton.setBackgroundImage(UIImage(named: "zx1"), for: .selected)
+        downButton.setBackgroundImage(UIImage(named: "zx1"), for: .highlighted)
         
     }
     
@@ -73,7 +73,11 @@ class RadioControllViewController: BaseViewController {
     }
     
     @IBAction func leftAction(serder: UIButton) {
-        serder.isSelected = !serder.isSelected
+        if serder.isHighlighted{
+            RobotFunction.btnControl(direction: 5)
+        }else{
+            RobotFunction.btnControl(direction: 0)
+        }
     }
     
     @IBAction func rightAction(serder: UIButton) {
@@ -81,7 +85,11 @@ class RadioControllViewController: BaseViewController {
     }
     
     @IBAction func directionAction(serder: UIButton) {
-        
+        if serder.isHighlighted{
+            RobotFunction.btnControl(direction: 1)
+        }else{
+            RobotFunction.btnControl(direction: 0)
+        }
     }
     
     @IBAction func trotAction(serder: UIButton) {
@@ -97,15 +105,16 @@ class RadioControllViewController: BaseViewController {
     }
     
     @IBAction func upAction(serder: UIButton) {
-        serder.isSelected = !serder.isSelected
+        RobotFunction.grap(state: 128)
     }
     
     @IBAction func middleAction(serder: UIButton) {
-        serder.isSelected = !serder.isSelected
+        RobotFunction.grap(state: 129)
     }
     
     @IBAction func downAction(serder: UIButton) {
-        serder.isSelected = !serder.isSelected
+//        serder.isSelected = !serder.isSelected
+        RobotFunction.grap(state: 130)
     }
     
     @IBAction func settingAction(serder: UIButton) {
