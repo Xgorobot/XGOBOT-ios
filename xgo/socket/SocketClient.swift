@@ -15,7 +15,7 @@ class SocketClient: ChannelObserver{
 
     func connect(host:String){
         client = ClientChannel(observer: self)
-        client.connect(host: host, port: 6000)
+        client.connect(host: host, port: 6000, timeout: 5)
         print("start connect: \(host)")
     }
     

@@ -100,14 +100,14 @@ class RadioControllViewController: BaseViewController {
     }
     
     @IBAction func trotAction(serder: UIButton) {
-        trotButton.isHighlighted = true
-        walkButton.isHighlighted = false
+        trotButton.isSelected = true
+        walkButton.isSelected = false
         RobotFunction.setStepState(state: 0)
     }
     
     @IBAction func walkAction(serder: UIButton) {
-        trotButton.isHighlighted = false
-        walkButton.isHighlighted = true
+        trotButton.isSelected = false
+        walkButton.isSelected = true
         RobotFunction.setStepState(state: 1)
     }
     
@@ -124,7 +124,6 @@ class RadioControllViewController: BaseViewController {
     }
     
     @IBAction func downAction(serder: UIButton) {
-//        serder.isSelected = !serder.isSelected
         RobotFunction.grap(state: 130)
     }
     

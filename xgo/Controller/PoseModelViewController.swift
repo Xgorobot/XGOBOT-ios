@@ -92,5 +92,6 @@ class PoseModelViewController: BaseViewController {
         xAxisRollSlider.reset()
         yAxisRollSlider.reset()
         zAxisRollSlider.reset()
+        RobotFunction.showMode(state: 0)
     }
 }

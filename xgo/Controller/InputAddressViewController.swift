@@ -19,7 +19,8 @@ class InputAddressViewController: BaseViewController,ChannelObserver {
         confirmButton.layer.masksToBounds = true
         confirmButton.setHorizontalGradientBackground(colorLeft: UIColor(hexString: "#3E67F7")!, colorRight: UIColor(hexString: "#349AFF")!, forState: .normal)
         textField.keyboardType = .numbersAndPunctuation
-        textField.text = "192.168.50.133"
+        textField.placeholder = "172.0.0.1"
+        textField.text = UserDefaultsManager.shared.host
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,13 +29,15 @@ class InputAddressViewController: BaseViewController,ChannelObserver {
     }
     
     @IBAction func confirmButton(serder: UIButton) {
-        
-        //        NetHelper().makeLogon()
-        //
         if isValidIPAddress(textField.text!){
+            UserDefaultsManager.shared.host = textField.text
             SOCKETMANAGER = SocketClient()
             SOCKETMANAGER?.setObserver(observer: self)
             SOCKETMANAGER?.connect(host: textField.text!)
+            
+            DispatchQueue.main.async {
+                self.confirmButton.isEnabled = false
+            }
         }else{
             showError("The IP address you entered is not valid.")
         }
@@ -50,7 +53,7 @@ class InputAddressViewController: BaseViewController,ChannelObserver {
         DispatchQueue.main.async {
             let alertController = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
             self.present(alertController, animated: true, completion: nil)
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
                 alertController.dismiss(animated: true, completion: nil)
             }
         }
@@ -61,7 +64,11 @@ class InputAddressViewController: BaseViewController,ChannelObserver {
     }
     
     func channel(_ client: libSwiftSocket.ClientChannel, didDisconnect error: libSwiftSocket.ChannelError?) {
-        showError("Robot connect failed :\(error)")
+        DispatchQueue.main.async {
+            var errorMsg:String = error?.description ?? "unknow"
+            self.showError("Robot connect failed : \(errorMsg)")
+            self.confirmButton.isEnabled = true
+        }
     }
     
     func channel(_ client: libSwiftSocket.ClientChannel, didConnect host: String, port: Int) {

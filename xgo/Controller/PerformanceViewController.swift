@@ -39,10 +39,11 @@ class PerformanceViewController: BaseViewController {
     
     @IBAction func changeSwitch(serder: UISwitch) {
         print(serder.isOn)
+        RobotFunction.showRepeat(enable: serder.isOn)
     }
     
     @IBAction func restAction(serder: UIButton) {
-        
+        RobotFunction.showMode(state: 0)
     }
     
     @IBAction func backAction(serder: UIButton) {
