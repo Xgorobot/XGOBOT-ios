@@ -19,10 +19,11 @@ class MenuViewController: UIViewController {
         finishButton.layer.borderWidth = 1
         finishButton.layer.cornerRadius = 17.5
         finishButton.layer.masksToBounds = true
+        finishButton.setHorizontalGradientBackground(colorLeft: UIColor(hexString: "#3E67F7")!, colorRight: UIColor(hexString: "#349AFF")!, forState: .highlighted)
         
         startButton.layer.cornerRadius = 17.5
         startButton.layer.masksToBounds = true
-        startButton.setHorizontalGradientBackground(colorLeft: UIColor(hexString: "#3E67F7")!, colorRight: UIColor(hexString: "#349AFF")!, forState: .normal)
+        startButton.setHorizontalGradientBackground(colorLeft: UIColor(hexString: "#3E67F7")!, colorRight: UIColor(hexString: "#349AFF")!, forState: .highlighted)
         
         
         let menuVewi = MenuShowView()
@@ -35,11 +36,15 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func starAction(serder: UIButton) {
-        
+        RobotFunction.setDebugMode(enable: true)
+        startButton.isHighlighted = true
+        finishButton.isHighlighted = false
     }
     
     @IBAction func finishAction(serder: UIButton) {
-        
+        RobotFunction.setDebugMode(enable: false)
+        startButton.isHighlighted = false
+        finishButton.isHighlighted = true
     }
     
     @IBAction func backAction(serder: UIButton) {
