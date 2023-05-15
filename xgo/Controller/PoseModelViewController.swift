@@ -45,26 +45,50 @@ class PoseModelViewController: BaseViewController {
         
         xAxisSlider = CenterStarSlider(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.4 * 0.88, height: 30))
         xAxisSlider.fillLineColor = UIColor.orange
+        xAxisSlider.maxValue = 10
+        xAxisSlider.callBack = {(value) in
+            print(value)
+        }
         xAxisContent.addSubview(xAxisSlider)
         
         yAxisSlider = CenterStarSlider(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.4 * 0.88, height: 30))
         yAxisSlider.fillLineColor = UIColor.green
+        yAxisSlider.maxValue = 10
+        yAxisSlider.callBack = {(value) in
+            print(value)
+        }
         yAxisContent.addSubview(yAxisSlider)
         
         zAxisSlider = CenterStarSlider(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.4 * 0.88, height: 30))
         zAxisSlider.fillLineColor = UIColor.blue
+        zAxisSlider.maxValue = 10
+        zAxisSlider.callBack = {(value) in
+            print(value)
+        }
         zAxisContent.addSubview(zAxisSlider)
         
         xAxisRollSlider = CenterStarSlider(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.4 * 0.88, height: 30))
         xAxisRollSlider.fillLineColor = UIColor.orange
+        xAxisRollSlider.maxValue = 10
+        xAxisRollSlider.callBack = {(value) in
+            print(value)
+        }
         xAxisRollContent.addSubview(xAxisRollSlider)
         
         yAxisRollSlider = CenterStarSlider(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.4 * 0.88, height: 30))
         yAxisRollSlider.fillLineColor = UIColor.green
+        yAxisRollSlider.maxValue = 10
+        yAxisRollSlider.callBack = {(value) in
+            print(value)
+        }
         yAxisRollContent.addSubview(yAxisRollSlider)
         
         zAxisRollSlider = CenterStarSlider(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.4 * 0.88, height: 30))
         zAxisRollSlider.fillLineColor = UIColor.blue
+        zAxisRollSlider.maxValue = 10
+        zAxisRollSlider.callBack = {(value) in
+            print(value)
+        }
         zAxisRollContent.addSubview(zAxisRollSlider)
         
         

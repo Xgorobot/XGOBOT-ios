@@ -13,6 +13,7 @@ class CenterStarSlider: UIControl {
     fileprivate var isSlide: Bool = false
     fileprivate var fillLine: UIView!
     fileprivate var marger: CGFloat! = 10
+    fileprivate var circle: UIView!
     
     // 填充线高度
     var fillLineHeight: CGFloat! = 6
@@ -30,6 +31,10 @@ class CenterStarSlider: UIControl {
     var imageViewSize: CGSize! = CGSize(width: 20, height: 20)
     // 图片颜色
     var imageViewColor: UIColor! = UIColor.white
+    // 回调
+    var callBack: ((_ value: CGFloat) -> ())?
+    // 设置返回最大值
+    var maxValue: CGFloat = 100
     
     
     override init(frame: CGRect) {
@@ -41,7 +46,7 @@ class CenterStarSlider: UIControl {
         fillLine.backgroundColor = fillLineColor
         self.addSubview(fillLine)
         
-        let circle = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        circle = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
         circle.center = self.center
         circle.backgroundColor = backgroundLineColor
         circle.layer.cornerRadius = 5
@@ -77,7 +82,6 @@ class CenterStarSlider: UIControl {
         // 扩大手势范围
         let tempTouchPoint = CGRect(x: self.imageView.frame.origin.x - (self.imageView.frame.width / 1.5), y: self.frame.origin.y, width: self.imageView.frame.width * 3, height: self.frame.height)
         if tempTouchPoint.contains(point) {
-            print(11111111)
             isSlide = true
         }
         return isSlide
@@ -108,11 +112,13 @@ class CenterStarSlider: UIControl {
     
     override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
         isSlide = false
-        let point = touch?.location(in: self)
-        if (point?.x ?? 0.0) < self.center.x {
-            print(-fillLine.frame.width)
+        let percent = (self.frame.width - 20) / 2 / maxValue
+        if imageView.center.x < circle.center.x {
+            let value = -(imageView.center.x - circle.center.x)
+            self.callBack?(value / percent)
         } else {
-            print(fillLine.frame.width)
+            let value = circle.center.x - imageView.center.x
+            self.callBack?(value / percent)
         }
         
     }
