@@ -14,7 +14,7 @@ class PerformanceViewController: BaseViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var switchButton: UISwitch!
     var collectionView: UICollectionView!
-    var isSelectIndex = 0
+    var isSelectIndex = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()

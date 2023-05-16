@@ -8,6 +8,7 @@
 import UIKit
 import WebKit
 
+
 class RadioControllViewController: BaseViewController {
     
     @IBOutlet weak var noLabel: UILabel!
@@ -106,44 +107,55 @@ class RadioControllViewController: BaseViewController {
     
     
     @IBAction func directionAction(serder: UIButton) {
-        if serder.isHighlighted{
-            RobotFunction.btnControl(direction: 1)
-            //direction：0=停止，1=向前，2=向后，3=向左，4=向右，5=左旋，6=右旋
-        }else{
-            RobotFunction.btnControl(direction: 0)
-        }
+
     }
     
     @IBAction func topTDDirection(_ sender: UIButton) {
         directionButton.setBackgroundImage(UIImage(named: "qian"), for: .normal)
+        RobotFunction.btnControl(direction: 1)
+        print(" btn qian")
     }
     
     @IBAction func topTUDirection(_ sender: UIButton) {
         directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
+        RobotFunction.btnControl(direction: 0)
+        print(" btn 000000")
     }
     
     @IBAction func leftTDDirection(_ sender: UIButton) {
         directionButton.setBackgroundImage(UIImage(named: "zuo"), for: .normal)
+        RobotFunction.btnControl(direction: 3)
+        print(" btn zuo")
     }
     
     @IBAction func leftTUDirection(_ sender: UIButton) {
         directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
+        RobotFunction.btnControl(direction: 0)
+        print(" btn 000000")
     }
     
     @IBAction func rightTDDirection(_ sender: UIButton) {
         directionButton.setBackgroundImage(UIImage(named: "you"), for: .normal)
+        RobotFunction.btnControl(direction: 4)
+        print(" btn you")
     }
     
     @IBAction func rightTUDirection(_ sender: UIButton) {
         directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
+        RobotFunction.btnControl(direction: 0)
+        print(" btn 000000")
     }
     
     @IBAction func bottomTDDirection(_ sender: UIButton) {
         directionButton.setBackgroundImage(UIImage(named: "hou"), for: .normal)
+        RobotFunction.btnControl(direction: 2)
+        print(" btn hou")
     }
     
     @IBAction func bottomTUDirection(_ sender: UIButton) {
         directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
+        RobotFunction.btnControl(direction: 0)
+        print(" btn 000000")
     }
     
     @IBAction func trotAction(serder: UIButton) {
