@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.6.4)
+  - IQKeyboardManagerSwift (6.5.11)
   - libSwiftSocket (1.2.7):
     - libSwiftSocket/core (= 1.2.7)
   - libSwiftSocket/core (1.2.7)
@@ -8,6 +9,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - IQKeyboardManagerSwift
   - libSwiftSocket
   - SnapKit
   - Starscream
@@ -15,16 +17,18 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - IQKeyboardManagerSwift
     - libSwiftSocket
     - SnapKit
     - Starscream
 
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
   libSwiftSocket: 1eff33b7b6163d685c7d48d3a7acf27c8b7387ef
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
 
-PODFILE CHECKSUM: 5c153ddf23aa38b31292e653c1c3623dedd4b337
+PODFILE CHECKSUM: 92428c28ba989111e8d13836358075f37f3e8036
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0
