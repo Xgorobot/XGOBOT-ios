@@ -80,6 +80,7 @@ class InputAddressViewController: BaseViewController,ChannelObserver {
         DispatchQueue.main.async {
             let homeVC = HomeViewController.loadFromStoryboard("Main")
             self.navigationController?.pushViewController(homeVC, animated: true)
+            self.navigationController?.viewControllers.remove(at: 0)
         }
     }
     
