@@ -1,0 +1,69 @@
+/* 
+  English.strings
+  xgo
+
+  Created by Mac on 2023/5/16.
+  
+*/
+
+"请输入机器人IP地址" = "Please enter IP address of the robot";
+"确定" = "Confirm";
+"基础设置" = "Setting";
+"语言选择" = "Language";
+"跟随系统" = "Auto";
+"开发选项" = "Development options";
+"以开发者身份运行此项目" = "Run this project as developer";
+"设备信息" = "Device Information";
+"是" = "Yes";
+"否" = "No";
+"中文" = "中文";
+"English" = "English";
+"表演" = "Performance Mode";
+"遥控" = "Radio Controll Mode";
+"标定模式" = "Calibration Mode";
+"点击【开始标定】按照说明书将机器狗摆放为标定姿势" = "Click【Calibrate】put the robot to the calibration position accor";
+"点击【完成标定】记录当前标定姿势为初始位置，10秒 后恢复默认站姿" = "Click【Calibrated】record the current calibration posture as the";
+"知道了" = "OK";
+"开始标定" = "Calibrate";
+"完成标定" = "Calibrated";
+"表演" = "Performance Mode";
+"动作轮播" = "Perform All";
+"趴下" = "Lie down";
+"站起" = "Stand up";
+"匍匐前进" = "Crawl";
+"转圈" = "Turn around";
+"蹲起" = "Squat";
+"转动Roll" = "Turn roll";
+"转动Pitch" = "Turn pitch";
+"转动Yaw" = "Turn yaw";
+"3轴联动" = "3 axis motion";
+"撒尿" = "Take a piss";
+"坐下" = "Sit down";
+"招手" = "Wave hand";
+"伸懒腰" = "Cive a stretch";
+"波浪" = "Wave body";
+"摇摆" = "Wave side";
+"乞求" = "Pray";
+"找食物" = "Looking for food";
+"握手" = "Hand shake";
+"俯卧撑" = "Push-up";
+"鸡头" = "Chicken head";
+"调皮" = "Naughty";
+"跳舞" = "Dance";
+"张望" = "Seek";
+"运动模式" = "Motion Mode";
+"位姿模式" = "Pose Mode";
+"抓取" = "Grab";
+"自稳模式" = "Auto stable";
+"整机速度" = "Frequency";
+"整机高度" = "Height";
+"步      幅" = "Step";
+"低速" = "Low";
+"普通" = "Normal";
+"高速" = "High";
+"X轴平移" = "X-axis translation";
+"Y轴平移" = "Y-axis translation";
+"Z轴平移" = "Z-axis translation";
+"X轴滚动" = "Roll";
+"Y轴滚动" = "Pitch";
+"Z轴滚动" = "Yaw";

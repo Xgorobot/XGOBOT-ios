@@ -11,12 +11,18 @@ class HomeViewController: BaseViewController {
     
     @IBOutlet weak var performanceView: UIView!
     @IBOutlet weak var radioControllView: UIView!
+    @IBOutlet weak var performanceLabel: UILabel!
+    @IBOutlet weak var radioLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addTap()
+        
+        performanceLabel.text = "表演".localized
+        radioLabel.text = "遥控".localized
+        
     }
     
     func addTap() {

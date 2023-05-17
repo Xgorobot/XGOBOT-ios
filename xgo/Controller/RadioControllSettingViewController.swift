@@ -27,6 +27,15 @@ class RadioControllSettingViewController: BaseViewController {
         setpSlider.value = 60
         heightValue.text = "60"
         rangeValue.text = "60"
+        
+        modleLabel.text = "自稳模式".localized
+        speedLabel.text = "整机速度".localized
+        heightLabel.text = "整机高度".localized
+        rangeLabel.text = "步      幅".localized
+        segmentedControl.setTitle("低速".localized, forSegmentAt: 0)
+        segmentedControl.setTitle("普通".localized, forSegmentAt: 1)
+        segmentedControl.setTitle("高速".localized, forSegmentAt: 2)
+        
     }
     
     @IBAction func settingAction(serder: UIButton) {

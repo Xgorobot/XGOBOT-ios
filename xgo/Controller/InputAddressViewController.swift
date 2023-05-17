@@ -12,6 +12,7 @@ class InputAddressViewController: BaseViewController,ChannelObserver {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var confirmButton: UIButton!
     
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,9 @@ class InputAddressViewController: BaseViewController,ChannelObserver {
         textField.keyboardType = .numbersAndPunctuation
         textField.placeholder = "172.0.0.1"
         textField.text = UserDefaultsManager.shared.host
+        
+        titleLabel.text = "请输入机器人IP地址".localized
+        confirmButton.setTitle("确定".localized, for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,18 +33,20 @@ class InputAddressViewController: BaseViewController,ChannelObserver {
     }
     
     @IBAction func confirmButton(serder: UIButton) {
-        if isValidIPAddress(textField.text!){
-            UserDefaultsManager.shared.host = textField.text
-            SOCKETMANAGER = SocketClient()
-            SOCKETMANAGER?.setObserver(observer: self)
-            SOCKETMANAGER?.connect(host: textField.text!)
-
-            DispatchQueue.main.async {
-                self.confirmButton.isEnabled = false
-            }
-        }else{
-            showError("The IP address you entered is not valid.")
-        }
+//        if isValidIPAddress(textField.text!){
+//            UserDefaultsManager.shared.host = textField.text
+//            SOCKETMANAGER = SocketClient()
+//            SOCKETMANAGER?.setObserver(observer: self)
+//            SOCKETMANAGER?.connect(host: textField.text!)
+//
+//            DispatchQueue.main.async {
+//                self.confirmButton.isEnabled = false
+//            }
+//        }else{
+//            showError("The IP address you entered is not valid.")
+//        }
+        let homeVC = HomeViewController.loadFromStoryboard("Main")
+        self.navigationController?.pushViewController(homeVC, animated: true)
     }
     
     func isValidIPAddress(_ ipAddress: String) -> Bool {

@@ -1,0 +1,153 @@
+
+/* Class = "UILabel"; text = "Z轴平移"; ObjectID = "0jN-dJ-gbO"; */
+"0jN-dJ-gbO.text" = "Z轴平移";
+
+/* Class = "UIButton"; normalTitle = "开始标定"; ObjectID = "1AP-Fy-fUC"; */
+"1AP-Fy-fUC.normalTitle" = "开始标定";
+
+/* Class = "UILabel"; text = "Y轴平移"; ObjectID = "1Vk-Mu-4nI"; */
+"1Vk-Mu-4nI.text" = "Y轴平移";
+
+/* Class = "UILabel"; text = "整机速度"; ObjectID = "4Hk-QQ-oko"; */
+"4Hk-QQ-oko.text" = "整机速度";
+
+/* Class = "UILabel"; text = "设备信息"; ObjectID = "6n8-n2-Fzi"; */
+"6n8-n2-Fzi.text" = "设备信息";
+
+/* Class = "UILabel"; text = "动作轮播"; ObjectID = "7Si-T3-r0G"; */
+"7Si-T3-r0G.text" = "动作轮播";
+
+/* Class = "UISegmentedControl"; 8Q3-bi-7K5.segmentTitles[0] = "低速"; ObjectID = "8Q3-bi-7K5"; */
+"8Q3-bi-7K5.segmentTitles[0]" = "低速";
+
+/* Class = "UISegmentedControl"; 8Q3-bi-7K5.segmentTitles[1] = "普通"; ObjectID = "8Q3-bi-7K5"; */
+"8Q3-bi-7K5.segmentTitles[1]" = "普通";
+
+/* Class = "UISegmentedControl"; 8Q3-bi-7K5.segmentTitles[2] = "高速"; ObjectID = "8Q3-bi-7K5"; */
+"8Q3-bi-7K5.segmentTitles[2]" = "高速";
+
+/* Class = "UILabel"; text = "标定模式"; ObjectID = "D5h-1y-pu0"; */
+"D5h-1y-pu0.text" = "标定模式";
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "DQ5-Pn-SSl"; */
+"DQ5-Pn-SSl.normalTitle" = "Reset";
+
+/* Class = "UILabel"; text = "整机高度"; ObjectID = "Dwf-2R-QoB"; */
+"Dwf-2R-QoB.text" = "整机高度";
+
+/* Class = "UILabel"; text = "自稳模式"; ObjectID = "Ek4-BD-VVa"; */
+"Ek4-BD-VVa.text" = "自稳模式";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "Gwl-6i-CiI"; */
+"Gwl-6i-CiI.normalTitle" = "Confirm";
+
+/* Class = "UIButton"; normalTitle = "Trot"; ObjectID = "Iee-oQ-KiT"; */
+"Iee-oQ-KiT.normalTitle" = "Trot";
+
+/* Class = "UIButton"; normalTitle = "跟随系统"; ObjectID = "KnF-fm-7FY"; */
+"KnF-fm-7FY.normalTitle" = "跟随系统";
+
+/* Class = "UILabel"; text = "基础设置"; ObjectID = "OCL-qb-MNp"; */
+"OCL-qb-MNp.text" = "基础设置";
+
+/* Class = "UIButton"; normalTitle = "否"; ObjectID = "OEF-mB-5c1"; */
+"OEF-mB-5c1.normalTitle" = "否";
+
+/* Class = "UILabel"; text = "表演"; ObjectID = "OMz-IY-pLp"; */
+"OMz-IY-pLp.text" = "表演";
+
+/* Class = "UILabel"; text = "表演"; ObjectID = "PQk-TR-IVF"; */
+"PQk-TR-IVF.text" = "表演";
+
+/* Class = "UILabel"; text = "以开发者身份运行此项目"; ObjectID = "Qw1-c8-Tiv"; */
+"Qw1-c8-Tiv.text" = "以开发者身份运行此项目";
+
+/* Class = "UILabel"; text = "Y轴滚动"; ObjectID = "SxB-6v-X59"; */
+"SxB-6v-X59.text" = "Y轴滚动";
+
+/* Class = "UIButton"; normalTitle = "运动模式"; ObjectID = "T0r-oh-eXH"; */
+"T0r-oh-eXH.normalTitle" = "运动模式";
+
+/* Class = "UIButton"; normalTitle = "Walk"; ObjectID = "TcD-E6-9dz"; */
+"TcD-E6-9dz.normalTitle" = "Walk";
+
+/* Class = "UILabel"; text = "100"; ObjectID = "TlI-jL-Un4"; */
+"TlI-jL-Un4.text" = "100";
+
+/* Class = "UILabel"; text = "X轴平移"; ObjectID = "Tx5-Bm-qoD"; */
+"Tx5-Bm-qoD.text" = "X轴平移";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "VSn-QK-yDv"; */
+"VSn-QK-yDv.text" = "0";
+
+/* Class = "UIButton"; normalTitle = "English"; ObjectID = "Vyh-on-vka"; */
+"Vyh-on-vka.normalTitle" = "English";
+
+/* Class = "UILabel"; text = "步      幅"; ObjectID = "XRr-CA-Tc5"; */
+"XRr-CA-Tc5.text" = "步      幅";
+
+/* Class = "UIButton"; normalTitle = "位姿模式"; ObjectID = "Zri-gQ-fRy"; */
+"Zri-gQ-fRy.normalTitle" = "位姿模式";
+
+/* Class = "UILabel"; text = "X轴滚动"; ObjectID = "aKw-Q4-X14"; */
+"aKw-Q4-X14.text" = "X轴滚动";
+
+/* Class = "UIButton"; normalTitle = "完成标定"; ObjectID = "bl7-Ew-CWB"; */
+"bl7-Ew-CWB.normalTitle" = "完成标定";
+
+/* Class = "UILabel"; text = "XGOBOT"; ObjectID = "c2C-jc-C1v"; */
+"c2C-jc-C1v.text" = "XGOBOT";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "cjG-Hw-rPb"; */
+"cjG-Hw-rPb.text" = "0";
+
+/* Class = "UIButton"; normalTitle = "抓取"; ObjectID = "dRY-Wo-5kW"; */
+"dRY-Wo-5kW.normalTitle" = "抓取";
+
+/* Class = "UILabel"; text = "语言选择"; ObjectID = "dbE-i9-dui"; */
+"dbE-i9-dui.text" = "语言选择";
+
+/* Class = "UILabel"; text = "WIFI已连接"; ObjectID = "f85-mh-LpL"; */
+"f85-mh-LpL.text" = "WIFI已连接";
+
+/* Class = "UIButton"; normalTitle = "中文"; ObjectID = "g17-iX-Ns4"; */
+"g17-iX-Ns4.normalTitle" = "中文";
+
+/* Class = "UILabel"; text = "请输入机器人IP地址"; ObjectID = "gwK-om-bH7"; */
+"gwK-om-bH7.text" = "请输入机器人IP地址";
+
+/* Class = "UILabel"; text = "100"; ObjectID = "h18-pt-KSz"; */
+"h18-pt-KSz.text" = "100";
+
+/* Class = "UILabel"; text = "点击【开始标定】按照说明书将机器狗摆放为标定姿势"; ObjectID = "hL6-wh-Ntg"; */
+"hL6-wh-Ntg.text" = "点击【开始标定】按照说明书将机器狗摆放为标定姿势";
+
+/* Class = "UILabel"; text = "点击【完成标定】记录当前标定姿势为初始位置，10秒 后恢复默认站姿"; ObjectID = "iAZ-1K-o7B"; */
+"iAZ-1K-o7B.text" = "点击【完成标定】记录当前标定姿势为初始位置，10秒 后恢复默认站姿";
+
+/* Class = "UIButton"; normalTitle = "位姿模式"; ObjectID = "kL9-fM-E6D"; */
+"kL9-fM-E6D.normalTitle" = "位姿模式";
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "kLJ-3N-cfw"; */
+"kLJ-3N-cfw.normalTitle" = "Reset";
+
+/* Class = "UILabel"; text = "M-2.0.19"; ObjectID = "kTn-6B-HsF"; */
+"kTn-6B-HsF.text" = "M-2.0.19";
+
+/* Class = "UIButton"; normalTitle = "运动模式"; ObjectID = "lzX-VK-1gG"; */
+"lzX-VK-1gG.normalTitle" = "运动模式";
+
+/* Class = "UIButton"; normalTitle = "是"; ObjectID = "mt8-yR-s6R"; */
+"mt8-yR-s6R.normalTitle" = "是";
+
+/* Class = "UIButton"; normalTitle = "知道了"; ObjectID = "pC9-9g-B8r"; */
+"pC9-9g-B8r.normalTitle" = "知道了";
+
+/* Class = "UILabel"; text = "开发选项"; ObjectID = "saQ-UW-atC"; */
+"saQ-UW-atC.text" = "开发选项";
+
+/* Class = "UILabel"; text = "Y轴滚动"; ObjectID = "wxJ-uU-ntb"; */
+"wxJ-uU-ntb.text" = "Y轴滚动";
+
+/* Class = "UILabel"; text = "遥控"; ObjectID = "zfw-eN-8qf"; */
+"zfw-eN-8qf.text" = "遥控";

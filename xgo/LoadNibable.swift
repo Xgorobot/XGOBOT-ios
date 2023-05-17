@@ -7,6 +7,32 @@
 
 import UIKit
 
+enum LanguageName : String {
+    
+    case chinese
+    case english
+    
+    var languageName: String {
+        switch self {
+        case .chinese:
+            return "Chinese"
+        case .english:
+            return "English"
+        }
+    }
+}
+
+extension String {
+    /// 国际化扩展
+    var localized: String {
+        return NSLocalizedString(self, tableName: LanguageManager.shared.languageFileName , value: self, comment: self)
+    }
+    
+    static var languages: [String] {
+        return ["cn","en"]
+    }
+}
+
 // 获取类型名
 protocol NamableComponent {
     static var typeName: String { get }

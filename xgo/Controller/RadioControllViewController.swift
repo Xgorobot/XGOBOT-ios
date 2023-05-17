@@ -70,6 +70,11 @@ class RadioControllViewController: BaseViewController {
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageViewClick)))
         
         directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
+        directionButton.isUserInteractionEnabled = false
+        
+        motionButton.setTitle("运动模式".localized, for: .normal)
+        poseButton.setTitle("位姿模式".localized, for: .normal)
+        grabButton.setTitle("抓取".localized, for: .normal)
         
     }
     

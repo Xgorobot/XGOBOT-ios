@@ -9,6 +9,8 @@ import UIKit
 
 class PoseModelViewController: BaseViewController {
     
+    
+    @IBOutlet weak var motionButton: UIButton!
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var xAxisLabel: UILabel!
     @IBOutlet weak var yAxisLabel: UILabel!
@@ -37,6 +39,16 @@ class PoseModelViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
+        
+        motionButton.setTitle("运动模式".localized, for: .normal)
+        postButton.setTitle("位姿模式".localized, for: .normal)
+        xAxisLabel.text = "X轴平移".localized
+        yAxisLabel.text = "Y轴平移".localized
+        zAxisLabel.text = "Z轴平移".localized
+        xAxisRollLabel.text = "X轴滚动".localized
+        yAxisRollLabel.text = "Y轴滚动".localized
+        zAxisRollLabel.text = "Z轴滚动".localized
+        
     }
     
     func initView() {

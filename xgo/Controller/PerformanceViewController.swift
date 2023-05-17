@@ -9,12 +9,14 @@ import UIKit
 
 class PerformanceViewController: BaseViewController {
     
-    var array = ["趴下","站起","匍匐前进","转圈","蹲起","转动Roll","转动Pitch","转动Yaw","3轴联动","撒尿","坐下","招手","伸懒腰","波浪","摇摆","乞求","找食物","握手","俯卧撑","鸡头","调皮","跳舞","张望"]
+    var array = ["趴下".localized,"站起".localized,"匍匐前进".localized,"转圈".localized,"蹲起".localized,"转动Roll".localized,"转动Pitch".localized,"转动Yaw".localized,"3轴联动".localized,"撒尿".localized,"坐下".localized,"招手".localized,"伸懒腰".localized,"波浪".localized,"摇摆".localized,"乞求".localized,"找食物".localized,"握手".localized,"俯卧撑".localized,"鸡头".localized,"调皮".localized,"跳舞".localized,"张望".localized]
     private var action: [Int] = [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 20, 24, 23, 22]
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var switchButton: UISwitch!
     var collectionView: UICollectionView!
     var isSelectIndex = -1
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,9 @@ class PerformanceViewController: BaseViewController {
         collectionView.snp.makeConstraints { make in
             make.edges.equalTo(contentView)
         }
+        
+        titleLabel.text = "表演".localized
+        descLabel.text = "动作轮播".localized
         
     }
     
