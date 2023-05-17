@@ -22,6 +22,7 @@ class InputAddressViewController: BaseViewController,ChannelObserver {
         textField.keyboardType = .numbersAndPunctuation
         textField.placeholder = "172.0.0.1"
         textField.text = UserDefaultsManager.shared.host
+        textField.textColor = UIColor.black
         
         titleLabel.text = "请输入机器人IP地址".localized
         confirmButton.setTitle("确定".localized, for: .normal)
