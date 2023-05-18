@@ -180,15 +180,15 @@ class RadioControllViewController: BaseViewController {
     }
     
     @IBAction func upAction(serder: UIButton) {
-        RobotFunction.grap(state: 128)
+        RobotFunction.grap(state: -128)
     }
     
     @IBAction func middleAction(serder: UIButton) {
-        RobotFunction.grap(state: 129)
+        RobotFunction.grap(state:  -127)
     }
     
     @IBAction func downAction(serder: UIButton) {
-        RobotFunction.grap(state: 130)
+        RobotFunction.grap(state:  -126)
     }
     
     @IBAction func settingAction(serder: UIButton) {

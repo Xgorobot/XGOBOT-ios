@@ -60,6 +60,8 @@ class PoseModelViewController: BaseViewController {
         xAxisSlider.maxValue = 10
         xAxisSlider.callBack = {(value) in
             print(value)
+            var valueSet = -1 * value * 3.5
+            RobotFunction.setXTrans(length: Int(valueSet))
         }
         xAxisContent.addSubview(xAxisSlider)
         
@@ -68,6 +70,8 @@ class PoseModelViewController: BaseViewController {
         yAxisSlider.maxValue = 10
         yAxisSlider.callBack = {(value) in
             print(value)
+            var valueSet = -1 * value * 1.8
+            RobotFunction.setYTrans(length: Int(valueSet))
         }
         yAxisContent.addSubview(yAxisSlider)
         
@@ -76,6 +80,8 @@ class PoseModelViewController: BaseViewController {
         zAxisSlider.maxValue = 10
         zAxisSlider.callBack = {(value) in
             print(value)
+            var valueSet = -1 * value * 2 + 95
+            RobotFunction.xyzControl(z: Int(valueSet))
         }
         zAxisContent.addSubview(zAxisSlider)
         
@@ -83,7 +89,8 @@ class PoseModelViewController: BaseViewController {
         xAxisRollSlider.fillLineColor = UIColor.orange
         xAxisRollSlider.maxValue = 10
         xAxisRollSlider.callBack = {(value) in
-            print(value)
+            var valueSet = -1 * value * 10
+            RobotFunction.rollControl(roll: Int(valueSet))
         }
         xAxisRollContent.addSubview(xAxisRollSlider)
         
@@ -91,7 +98,8 @@ class PoseModelViewController: BaseViewController {
         yAxisRollSlider.fillLineColor = UIColor.green
         yAxisRollSlider.maxValue = 10
         yAxisRollSlider.callBack = {(value) in
-            print(value)
+            var valueSet = -1 * value * 10
+            RobotFunction.pitchControl(pitch: Int(valueSet))
         }
         yAxisRollContent.addSubview(yAxisRollSlider)
         
@@ -99,7 +107,8 @@ class PoseModelViewController: BaseViewController {
         zAxisRollSlider.fillLineColor = UIColor.blue
         zAxisRollSlider.maxValue = 10
         zAxisRollSlider.callBack = {(value) in
-            print(value)
+            var valueSet = -1 * value * 10
+            RobotFunction.yawControl(yaw: Int(valueSet))
         }
         zAxisRollContent.addSubview(zAxisRollSlider)
         
