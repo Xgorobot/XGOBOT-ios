@@ -69,7 +69,7 @@ class RadioControllViewController: BaseViewController {
         imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageViewClick)))
         
-        directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
+        directionButton.setBackgroundImage(UIImage(named: "yuan-1"), for: .normal)
         directionButton.isUserInteractionEnabled = false
         
         motionButton.setTitle("运动模式".localized, for: .normal)
@@ -116,49 +116,49 @@ class RadioControllViewController: BaseViewController {
     }
     
     @IBAction func topTDDirection(_ sender: UIButton) {
-        directionButton.setBackgroundImage(UIImage(named: "qian"), for: .normal)
+        directionButton.setBackgroundImage(UIImage(named: "s-1"), for: .normal)
         RobotFunction.btnControl(direction: 1)
         print(" btn qian")
     }
     
     @IBAction func topTUDirection(_ sender: UIButton) {
-        directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
+        directionButton.setBackgroundImage(UIImage(named: "yuan-1"), for: .normal)
         RobotFunction.btnControl(direction: 0)
         print(" btn 000000")
     }
     
     @IBAction func leftTDDirection(_ sender: UIButton) {
-        directionButton.setBackgroundImage(UIImage(named: "zuo"), for: .normal)
+        directionButton.setBackgroundImage(UIImage(named: "z-1"), for: .normal)
         RobotFunction.btnControl(direction: 3)
         print(" btn zuo")
     }
     
     @IBAction func leftTUDirection(_ sender: UIButton) {
-        directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
+        directionButton.setBackgroundImage(UIImage(named: "yuan-1"), for: .normal)
         RobotFunction.btnControl(direction: 0)
         print(" btn 000000")
     }
     
     @IBAction func rightTDDirection(_ sender: UIButton) {
-        directionButton.setBackgroundImage(UIImage(named: "you"), for: .normal)
+        directionButton.setBackgroundImage(UIImage(named: "x-1"), for: .normal)
         RobotFunction.btnControl(direction: 4)
         print(" btn you")
     }
     
     @IBAction func rightTUDirection(_ sender: UIButton) {
-        directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
+        directionButton.setBackgroundImage(UIImage(named: "yuan-1"), for: .normal)
         RobotFunction.btnControl(direction: 0)
         print(" btn 000000")
     }
     
     @IBAction func bottomTDDirection(_ sender: UIButton) {
-        directionButton.setBackgroundImage(UIImage(named: "hou"), for: .normal)
+        directionButton.setBackgroundImage(UIImage(named: "y-1"), for: .normal)
         RobotFunction.btnControl(direction: 2)
         print(" btn hou")
     }
     
     @IBAction func bottomTUDirection(_ sender: UIButton) {
-        directionButton.setBackgroundImage(UIImage(named: "pan"), for: .normal)
+        directionButton.setBackgroundImage(UIImage(named: "yuan-1"), for: .normal)
         RobotFunction.btnControl(direction: 0)
         print(" btn 000000")
     }
