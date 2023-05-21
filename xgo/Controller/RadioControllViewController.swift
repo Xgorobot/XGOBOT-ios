@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 
 
-class RadioControllViewController: BaseViewController {
+class RadioControllViewController: BaseViewController{
     
     @IBOutlet weak var noLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -39,6 +39,18 @@ class RadioControllViewController: BaseViewController {
         poseModelVC.view.isHidden = true
         
         webView.isHidden = true
+        // 禁止缩放
+        webView.scrollView.maximumZoomScale = 1.0
+        webView.scrollView.minimumZoomScale = 1.0
+
+        // 禁止拖动
+        webView.scrollView.isScrollEnabled = false
+
+        // 自动缩放至webview大小
+        webView.scrollView.contentInsetAdjustmentBehavior = .always
+        imageView.isHidden = true
+        webView.isHidden = false
+//        webView.navigationDelegate = self TODO 设置wknavigationDelegate会崩溃，不知道为啥
         
         motionButton.setHorizontalGradientBackground(colorLeft: UIColor(hexString: "#3E67F7")!, colorRight: UIColor(hexString: "#349AFF")!, forState: .normal)
         
@@ -49,10 +61,11 @@ class RadioControllViewController: BaseViewController {
         rightButton.setBackgroundImage(UIImage(named: "youzhuan1"), for: .highlighted)
         
         trotButton.setBackgroundImage(UIImage(named: "wdian"), for: .normal)
-        trotButton.setBackgroundImage(UIImage(named: "dian-1"), for: .highlighted)
+        trotButton.setBackgroundImage(UIImage(named: "dian-1"), for: .selected)
+        trotButton.isSelected = true
         
         walkButton.setBackgroundImage(UIImage(named: "wdian"), for: .normal)
-        walkButton.setBackgroundImage(UIImage(named: "dian-1"), for: .highlighted)
+        walkButton.setBackgroundImage(UIImage(named: "dian-1"), for: .selected)
         
         grabButton.setBackgroundImage(UIImage(named: "wdian"), for: .normal)
         grabButton.setBackgroundImage(UIImage(named: "dian-1"), for: .selected)
@@ -76,12 +89,10 @@ class RadioControllViewController: BaseViewController {
         poseButton.setTitle("位姿模式".localized, for: .normal)
         grabButton.setTitle("抓取".localized, for: .normal)
 //        imageViewClick()
+        imageViewClick()//进入页面立即加载网页
     }
     
     @objc func imageViewClick() {
-        imageView.isHidden = true
-//        noLabel.isHidden = true
-        webView.isHidden = false
         webView.load(URLRequest(url: RobotFunction.getWebUrl()))
     }
     
@@ -202,4 +213,28 @@ class RadioControllViewController: BaseViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        return
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        //期望加载完成隐藏默认图
+            self.imageView.isHidden = true
+            self.webView.isHidden = false
+        //期望加载完成后滚动到网页最中间 @MENGWEI
+            // 获取网页的宽度和高度
+            let width = webView.scrollView.contentSize.width
+            let height = webView.scrollView.contentSize.height
+            // 将网页滚动到水平和垂直方向的中心位置
+            let offsetX = (width - webView.frame.width) / 2
+            let offsetY = (height - webView.frame.height) / 2
+            let offset = CGPoint(x: offsetX, y: offsetY)
+            webView.scrollView.setContentOffset(offset, animated: true)
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error){
+        //期望加载失败时显示默认图
+            self.imageView.isHidden = false
+            self.webView.isHidden = true
+    }
 }
