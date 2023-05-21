@@ -89,7 +89,12 @@ class RadioControllViewController: BaseViewController{
         poseButton.setTitle("位姿模式".localized, for: .normal)
         grabButton.setTitle("抓取".localized, for: .normal)
 //        imageViewClick()
+        startCamera()
         imageViewClick()//进入页面立即加载网页
+    }
+    
+    func startCamera(){
+        RobotFunction.startCamera(state: 1)
     }
     
     @objc func imageViewClick() {
