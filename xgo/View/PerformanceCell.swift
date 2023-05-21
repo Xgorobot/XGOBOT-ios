@@ -16,10 +16,10 @@ class PerformanceCell: UICollectionViewCell {
         didSet {
             
             if  isSelect {
-                titleLabel.textColor = UIColor.blue
+                titleLabel.textColor = UIColor(red: 0.21, green: 0.54, blue: 0.98,alpha:1)
                 icon.image = UIImage(named: "dian")
             } else {
-                titleLabel.textColor = UIColor.white
+                titleLabel.textColor = UIColor(red: 0.55, green: 0.64, blue: 0.78,alpha:1)
                 icon.image = UIImage(named: "wdian")
             }
             
