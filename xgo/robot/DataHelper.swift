@@ -27,13 +27,18 @@ class DataHelper {
         }
         bytes[bytes.count - 1] = add
         
-        let resultString = bytesToHex(bytes)
+        let resultString = int8ArrayToHexString(bytes)
+        print("bytesToHEX: \(resultString)")
         return "$\(resultString)#"
 
     }
     
-    class func bytesToHex(_ bytes: [Int8]) -> String {
-        return bytes.map { String(format: "%02X", $0) }.joined()
+    class func int8ArrayToHexString(_ int8Array: [Int8]) -> String {
+        let data = Data(bytes: int8Array, count: int8Array.count)
+        return data.map { String(format: "%02hhx", $0) }.joined()
     }
 }
+
+$012206690092#
+$012206690092#
 
