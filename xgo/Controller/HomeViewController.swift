@@ -14,6 +14,7 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var performanceLabel: UILabel!
     @IBOutlet weak var radioLabel: UILabel!
     
+    @IBOutlet weak var debugModeSetting: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,14 @@ class HomeViewController: BaseViewController {
         performanceLabel.text = "表演".localized
         radioLabel.text = "遥控".localized
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if UserDefaultsManager.shared.developMode{
+            debugModeSetting.isHidden = false
+        }else{
+            debugModeSetting.isHidden = true
+        }
     }
     
     func addTap() {

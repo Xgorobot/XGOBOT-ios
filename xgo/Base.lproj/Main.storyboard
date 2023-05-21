@@ -111,7 +111,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="tiaoshi"/>
                                 <connections>
-                                    <action selector="settingActionWithSerder:" destination="Ks0-Ub-z5V" eventType="touchUpInside" id="X1w-Ul-ynr"/>
+                                    <action selector="menuActionWithSerder:" destination="Ks0-Ub-z5V" eventType="touchUpInside" id="cBo-mj-Aij"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEi-y9-72g">
@@ -123,7 +123,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="shuoming"/>
                                 <connections>
-                                    <action selector="menuActionWithSerder:" destination="Ks0-Ub-z5V" eventType="touchUpInside" id="dHQ-kb-hia"/>
+                                    <action selector="settingActionWithSerder:" destination="Ks0-Ub-z5V" eventType="touchUpInside" id="j5y-AQ-23h"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XGOBOT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2C-jc-C1v">
@@ -145,7 +145,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="356" height="264"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biaoyan" translatesAutoresizingMaskIntoConstraints="NO" id="NXn-nO-vDv">
-                                                <rect key="frame" x="71.333333333333329" y="-30.333333333333329" width="213.33333333333337" height="213.66666666666663"/>
+                                                <rect key="frame" x="71.333333333333329" y="-30.333333333333314" width="213.33333333333337" height="213.66666666666663"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表演" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMz-IY-pLp">
                                                 <rect key="frame" x="160.66666666666666" y="203.33333333333331" width="34.666666666666657" height="20.333333333333343"/>
@@ -168,7 +168,7 @@
                                         <rect key="frame" x="356" y="0.0" width="356" height="264"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yaokong" translatesAutoresizingMaskIntoConstraints="NO" id="ngO-tS-4KA">
-                                                <rect key="frame" x="71.333333333333329" y="-30.333333333333329" width="213.33333333333337" height="213.66666666666663"/>
+                                                <rect key="frame" x="71.333333333333329" y="-30.333333333333314" width="213.33333333333337" height="213.66666666666663"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="遥控" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfw-eN-8qf">
                                                 <rect key="frame" x="160.66666666666663" y="203.33333333333331" width="34.666666666666657" height="20.333333333333343"/>
@@ -214,6 +214,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="debugModeSetting" destination="eDH-Ts-5na" id="lZh-sN-p5h"/>
                         <outlet property="performanceLabel" destination="OMz-IY-pLp" id="yyH-Pi-NAs"/>
                         <outlet property="performanceView" destination="OuF-dp-bG6" id="e8i-ib-Qpv"/>
                         <outlet property="radioControllView" destination="uY6-Yc-HKp" id="RfZ-7Y-YlU"/>
@@ -667,7 +668,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ea4-fw-iD1">
-                                <rect key="frame" x="0.0" y="0.0" width="812" height="450"/>
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                                 <color key="backgroundColor" red="0.045959211889999997" green="0.1120206341" blue="0.25245243309999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2T-kd-fxN">
@@ -754,7 +755,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcD-E6-9dz">
-                                <rect key="frame" x="411" y="371" width="130" height="35"/>
+                                <rect key="frame" x="411" y="296" width="130" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Walk"/>
@@ -763,7 +764,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iee-oQ-KiT">
-                                <rect key="frame" x="271" y="371" width="130" height="35"/>
+                                <rect key="frame" x="271" y="296" width="130" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="G1f-ml-S8E"/>
                                     <constraint firstAttribute="width" constant="130" id="WPc-J8-7OO"/>
@@ -778,10 +779,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="cSv-V9-g5X">
-                                <rect key="frame" x="721" y="180" width="60" height="216"/>
+                                <rect key="frame" x="721" y="180" width="60" height="141"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fie-j4-wMt">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="g9q-hT-Rwn"/>
                                             <constraint firstAttribute="width" constant="60" id="yaL-52-wSK"/>
@@ -792,7 +793,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5k-cI-cVQ">
-                                        <rect key="frame" x="0.0" y="78" width="60" height="60"/>
+                                        <rect key="frame" x="0.0" y="53" width="60" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="Mld-ly-ibk"/>
                                             <constraint firstAttribute="width" constant="60" id="YiK-ne-aYZ"/>
@@ -803,7 +804,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5t-Yj-NF8">
-                                        <rect key="frame" x="0.0" y="156" width="60" height="60"/>
+                                        <rect key="frame" x="0.0" y="106" width="60" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="XTf-NY-pAl"/>
                                             <constraint firstAttribute="width" constant="60" id="nuo-Zq-ee2"/>
@@ -829,14 +830,14 @@
                                 </connections>
                             </button>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cct-nO-isA">
-                                <rect key="frame" x="243.66666666666666" y="137.33333333333331" width="324.66666666666674" height="175.33333333333331"/>
+                                <rect key="frame" x="243.66666666666666" y="99.666666666666671" width="324.66666666666674" height="175.66666666666663"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Cct-nO-isA" secondAttribute="height" multiplier="185:100" id="hh6-ua-u5C"/>
                                 </constraints>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFK-w8-Trc">
-                                <rect key="frame" x="10" y="172.33333333333337" width="213.66666666666666" height="213.66666666666663"/>
+                                <rect key="frame" x="10" y="97.333333333333329" width="213.66666666666666" height="213.66666666666669"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gFK-w8-Trc" secondAttribute="height" multiplier="1:1" id="2hr-Q5-beY"/>
                                 </constraints>
@@ -846,10 +847,10 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="novideo" translatesAutoresizingMaskIntoConstraints="NO" id="ILE-K5-g1y">
-                                <rect key="frame" x="341" y="190" width="130" height="70"/>
+                                <rect key="frame" x="341" y="152.33333333333334" width="130" height="70.333333333333343"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QW8-7I-MTh">
-                                <rect key="frame" x="81.333333333333329" y="172.33333333333334" width="70.999999999999986" height="71.333333333333343"/>
+                                <rect key="frame" x="81.333333333333329" y="97.333333333333343" width="70.999999999999986" height="71.333333333333343"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="topTDDirection:" destination="bi6-TO-6zR" eventType="touchDown" id="vyL-UR-gKY"/>
@@ -859,7 +860,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLS-PJ-BBP">
-                                <rect key="frame" x="10" y="243.66666666666663" width="71.333333333333329" height="71"/>
+                                <rect key="frame" x="10" y="168.66666666666666" width="71.333333333333329" height="71"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="leftTDDirection:" destination="bi6-TO-6zR" eventType="touchDown" id="VWU-Qn-YKv"/>
@@ -869,7 +870,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58e-Pw-P1a">
-                                <rect key="frame" x="81.333333333333329" y="314.66666666666669" width="70.999999999999986" height="71.333333333333314"/>
+                                <rect key="frame" x="81.333333333333329" y="239.66666666666666" width="70.999999999999986" height="71.333333333333343"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="bottomTDDirection:" destination="bi6-TO-6zR" eventType="touchDown" id="TuV-8g-JVe"/>
@@ -879,7 +880,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdW-Xm-av7">
-                                <rect key="frame" x="152.33333333333334" y="243.66666666666663" width="71.333333333333343" height="71"/>
+                                <rect key="frame" x="152.33333333333334" y="168.66666666666666" width="71.333333333333343" height="71"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="rightTDDirection:" destination="bi6-TO-6zR" eventType="touchDown" id="R5K-dT-G6d"/>
