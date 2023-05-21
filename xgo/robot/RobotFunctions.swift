@@ -35,7 +35,9 @@ public class RobotFunction {
     public static func getWebUrl() -> URL {
         let hostIp = UserDefaultsManager.shared.host
         let cameraPort = UserDefaultsManager.shared.cameraPort
-        return URL(string: "\(hostIp ?? "172.0.0.1"):\(cameraPort)/video_feed")!
+        let targetUrl = URL(string: "\(hostIp ?? "172.0.0.1"):\(cameraPort)/video_feed")!
+        print("targetUrl:\(targetUrl)")
+        return targetUrl
     }
 
     //陀螺仪开关 遥控页面右上角设置菜单里有

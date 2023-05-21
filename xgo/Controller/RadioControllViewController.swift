@@ -75,7 +75,7 @@ class RadioControllViewController: BaseViewController {
         motionButton.setTitle("运动模式".localized, for: .normal)
         poseButton.setTitle("位姿模式".localized, for: .normal)
         grabButton.setTitle("抓取".localized, for: .normal)
-        
+//        imageViewClick()
     }
     
     @objc func imageViewClick() {
