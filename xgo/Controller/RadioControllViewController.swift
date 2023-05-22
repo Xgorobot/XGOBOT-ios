@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 
 
-class RadioControllViewController: BaseViewController{
+class RadioControllViewController: BaseViewController, WKNavigationDelegate{
     
     @IBOutlet weak var noLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -49,8 +49,6 @@ class RadioControllViewController: BaseViewController{
 
         // 自动缩放至webview大小
         webView.scrollView.contentInsetAdjustmentBehavior = .always
-        imageView.isHidden = true
-        webView.isHidden = false
         
         motionButton.setHorizontalGradientBackground(colorLeft: UIColor(hexString: "#3E67F7")!, colorRight: UIColor(hexString: "#349AFF")!, forState: .normal)
         motionButton.addRoundedBottomCorners()
@@ -244,19 +242,5 @@ class RadioControllViewController: BaseViewController{
             self.imageView.isHidden = false
             self.webView.isHidden = true
     }
-}
-
-extension RadioControllViewController: WKNavigationDelegate {
-    
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        imageView.isHidden = true
-        webView.isHidden = false
-    }
-    
-    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        imageView.isHidden = false
-        webView.isHidden = true
-    }
-    
 }
 
