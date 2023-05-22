@@ -16,6 +16,7 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var okButton: UIButton!
     
+    private var menuVewi: MenuShowView!
     
     
     override func viewDidLoad() {
@@ -25,18 +26,17 @@ class MenuViewController: UIViewController {
         finishButton.layer.borderWidth = 1
         finishButton.layer.cornerRadius = 17.5
         finishButton.layer.masksToBounds = true
-        finishButton.setHorizontalGradientBackground(colorLeft: UIColor(hexString: "#3E67F7")!, colorRight: UIColor(hexString: "#349AFF")!, forState: .highlighted)
+        finishButton.setHorizontalGradientBackground(colorLeft: UIColor(hexString: "#3E67F7")!, colorRight: UIColor(hexString: "#349AFF")!, forState: .selected)
         
+        startButton.layer.borderColor = UIColor(hexString: "#3E67F7")!.cgColor
+        startButton.layer.borderWidth = 1
         startButton.layer.cornerRadius = 17.5
         startButton.layer.masksToBounds = true
-        startButton.setHorizontalGradientBackground(colorLeft: UIColor(hexString: "#3E67F7")!, colorRight: UIColor(hexString: "#349AFF")!, forState: .normal)
+        startButton.setHorizontalGradientBackground(colorLeft: UIColor(hexString: "#3E67F7")!, colorRight: UIColor(hexString: "#349AFF")!, forState: .selected)
         
         
-        let menuVewi = MenuShowView()
+        menuVewi = MenuShowView()
         self.view.addSubview(menuVewi)
-        
-        menuVewi.layer.cornerRadius = 5
-        menuVewi.layer.masksToBounds = true
         
         okButton.layer.cornerRadius = 15.5
         okButton.layer.masksToBounds = true
@@ -53,14 +53,14 @@ class MenuViewController: UIViewController {
     
     @IBAction func starAction(serder: UIButton) {
         RobotFunction.setDebugMode(enable: true)
-        startButton.isHighlighted = true
-        finishButton.isHighlighted = false
+        startButton.isSelected = true
+        finishButton.isSelected = false
     }
     
     @IBAction func finishAction(serder: UIButton) {
         RobotFunction.setDebugMode(enable: false)
-        startButton.isHighlighted = false
-        finishButton.isHighlighted = true
+        startButton.isSelected = false
+        finishButton.isSelected = true
     }
     
     @IBAction func backAction(serder: UIButton) {

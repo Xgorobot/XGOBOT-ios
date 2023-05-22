@@ -18,6 +18,8 @@ class RadioControllSettingViewController: BaseViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var heightSlider: UISlider!
     @IBOutlet weak var setpSlider: UISlider!
+    @IBOutlet weak var modelSwitch: UISwitch!
+    @IBOutlet weak var bView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,37 @@ class RadioControllSettingViewController: BaseViewController {
         segmentedControl.setTitle("普通".localized, forSegmentAt: 1)
         segmentedControl.setTitle("高速".localized, forSegmentAt: 2)
         
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(closeView)))
+        bView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(bViewClick)))
+        
+        if let modelKey = UserDefaults.standard.object(forKey: "ModelKey") as? Bool {
+            modelSwitch.isOn = modelKey
+            RobotFunction.autoBalance(enable: modelKey)
+        }
+        
+        if let speedKey = UserDefaults.standard.object(forKey: "SpeedKey") as? Int {
+            segmentedControl.selectedSegmentIndex = speedKey - 1
+            RobotFunction.setSpeed(speed: speedKey)
+        }
+        
+        if let heightKey = UserDefaults.standard.object(forKey: "HeightKey") as? Int {
+            heightValue.text = "\(heightKey)"
+            RobotFunction.heightControl(height: 75 + heightKey * 2 / 5)
+        }
+        
+        if let rangeKey = UserDefaults.standard.object(forKey: "RangeKey") as? Int {
+            rangeValue.text = "\(rangeKey)"
+            RobotFunction.setStepLength(length: rangeKey)
+        }
+        
+    }
+    
+    @objc func closeView() {
+        self.dismiss(animated: false)
+    }
+    
+    @objc func bViewClick() {
+        
     }
     
     @IBAction func settingAction(serder: UIButton) {
@@ -45,6 +78,7 @@ class RadioControllSettingViewController: BaseViewController {
     @IBAction func modelAction(serder: UISwitch) {
         print(serder.isOn)
         RobotFunction.autoBalance(enable: serder.isOn)
+        saveKeyToValue(key: "ModelKey", value: serder.isOn)
     }
     
     @IBAction func speedAction(serder: UISegmentedControl) {
@@ -59,18 +93,21 @@ class RadioControllSettingViewController: BaseViewController {
         default:
             RobotFunction.setSpeed(speed:3)
         }
+        saveKeyToValue(key: "SpeedKey", value: serder.selectedSegmentIndex + 1)
     }
     
     @IBAction func heightAction(serder: UISlider) {
         print(Int(serder.value))
         heightValue.text = "\(Int(serder.value))"
         RobotFunction.heightControl(height: 75 + Int(serder.value) * 2 / 5)
+        saveKeyToValue(key: "HeightKey", value: Int(serder.value))
     }
     
     @IBAction func rangeAction(serder: UISlider) {
         print(serder.value)
         rangeValue.text = "\(Int(serder.value))"
         RobotFunction.setStepLength(length: Int(serder.value))
+        saveKeyToValue(key: "RangeKey", value: Int(serder.value))
     }
     
     @IBAction func heightRestAction(serder: UIButton) {
@@ -78,6 +115,7 @@ class RadioControllSettingViewController: BaseViewController {
         heightSlider.setValue(60, animated: false)
         heightValue.text = "60"
         RobotFunction.heightControl(height: 75 + 60 * 2 / 5)
+        saveKeyToValue(key: "HeightKey", value: 60)
     }
     
     @IBAction func rangeRestAction(serder: UIButton) {
@@ -85,6 +123,12 @@ class RadioControllSettingViewController: BaseViewController {
         setpSlider.setValue(60, animated: false)
         rangeValue.text = "60"
         RobotFunction.setStepLength(length: 60)
+        saveKeyToValue(key: "RangeKey", value: 60)
+    }
+    
+    func saveKeyToValue(key: String, value: Any) {
+        UserDefaults.standard.setValue(value, forKey: key)
+        UserDefaults.standard.synchronize()
     }
     
 }

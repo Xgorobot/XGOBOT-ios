@@ -39,14 +39,17 @@ class RadioControllViewController: BaseViewController {
         poseModelVC.view.isHidden = true
         
         webView.isHidden = true
+        webView.navigationDelegate = self
         
         motionButton.setHorizontalGradientBackground(colorLeft: UIColor(hexString: "#3E67F7")!, colorRight: UIColor(hexString: "#349AFF")!, forState: .normal)
+        motionButton.addRoundedBottomCorners()
+        poseButton.addRoundedBottomCorners()
         
         leftButton.setBackgroundImage(UIImage(named: "zuozhuan"), for: .normal)
-        leftButton.setBackgroundImage(UIImage(named: "zuozhuan1"), for: .highlighted)
+        leftButton.setBackgroundImage(UIImage(named: "zuozhuan-1"), for: .highlighted)
         
         rightButton.setBackgroundImage(UIImage(named: "youzhuan"), for: .normal)
-        rightButton.setBackgroundImage(UIImage(named: "youzhuan1"), for: .highlighted)
+        rightButton.setBackgroundImage(UIImage(named: "youzhuan-1"), for: .highlighted)
         
         trotButton.setBackgroundImage(UIImage(named: "wdian"), for: .normal)
         trotButton.setBackgroundImage(UIImage(named: "dian-1"), for: .highlighted)
@@ -79,9 +82,6 @@ class RadioControllViewController: BaseViewController {
     }
     
     @objc func imageViewClick() {
-        imageView.isHidden = true
-//        noLabel.isHidden = true
-        webView.isHidden = false
         webView.load(URLRequest(url: RobotFunction.getWebUrl()))
     }
     
@@ -203,3 +203,18 @@ class RadioControllViewController: BaseViewController {
     }
     
 }
+
+extension RadioControllViewController: WKNavigationDelegate {
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        imageView.isHidden = true
+        webView.isHidden = false
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        imageView.isHidden = false
+        webView.isHidden = true
+    }
+    
+}
+

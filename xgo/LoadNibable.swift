@@ -96,6 +96,16 @@ extension UIButton {
         // Set the UIImage as the background image for the button
         setBackgroundImage(gradientImage, for: state)
     }
+    
+            
+    func addRoundedBottomCorners() {
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = UIBezierPath(roundedRect: bounds,
+                                      byRoundingCorners: [.bottomLeft, .bottomRight],
+                                      cornerRadii: CGSize(width: 10, height: 10)).cgPath
+        layer.mask = maskLayer
+    }
+    
 }
 
 extension UIColor {

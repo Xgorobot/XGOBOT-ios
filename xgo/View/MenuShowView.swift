@@ -20,6 +20,14 @@ class MenuShowView: UIView {
         super.awakeFromNib()
     }
     
+    @IBAction func noClick(_ sender: Any) {
+        
+    }
+    
+    @IBAction func viewClick(_ sender: Any) {
+        self.removeFromSuperview()
+    }
+    
     @IBAction func buttonClick(serder: UIButton) {
         self.removeFromSuperview()
     }

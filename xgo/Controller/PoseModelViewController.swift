@@ -40,6 +40,8 @@ class PoseModelViewController: BaseViewController {
         super.viewDidLoad()
         initView()
         
+        motionButton.addRoundedBottomCorners()
+        postButton.addRoundedBottomCorners()
         motionButton.setTitle("运动模式".localized, for: .normal)
         postButton.setTitle("位姿模式".localized, for: .normal)
         xAxisLabel.text = "X轴平移".localized

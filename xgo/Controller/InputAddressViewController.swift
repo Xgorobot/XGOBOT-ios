@@ -23,6 +23,7 @@ class InputAddressViewController: BaseViewController,ChannelObserver {
         textField.placeholder = "172.0.0.1"
         textField.text = UserDefaultsManager.shared.host
         textField.textColor = UIColor.black
+        textField.backgroundColor = UIColor.white
         
         titleLabel.text = "请输入机器人IP地址".localized
         confirmButton.setTitle("确定".localized, for: .normal)
@@ -34,20 +35,18 @@ class InputAddressViewController: BaseViewController,ChannelObserver {
     }
     
     @IBAction func confirmButton(serder: UIButton) {
-//        if isValidIPAddress(textField.text!){
-//            UserDefaultsManager.shared.host = textField.text
-//            SOCKETMANAGER = SocketClient()
-//            SOCKETMANAGER?.setObserver(observer: self)
-//            SOCKETMANAGER?.connect(host: textField.text!)
-//
-//            DispatchQueue.main.async {
-//                self.confirmButton.isEnabled = false
-//            }
-//        }else{
-//            showError("The IP address you entered is not valid.")
-//        }
-        let homeVC = HomeViewController.loadFromStoryboard("Main")
-        self.navigationController?.pushViewController(homeVC, animated: true)
+        if isValidIPAddress(textField.text!){
+            UserDefaultsManager.shared.host = textField.text
+            SOCKETMANAGER = SocketClient()
+            SOCKETMANAGER?.setObserver(observer: self)
+            SOCKETMANAGER?.connect(host: textField.text!)
+
+            DispatchQueue.main.async {
+                self.confirmButton.isEnabled = false
+            }
+        }else{
+            showError("The IP address you entered is not valid.")
+        }
     }
     
     func isValidIPAddress(_ ipAddress: String) -> Bool {
