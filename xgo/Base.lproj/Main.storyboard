@@ -111,7 +111,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="tiaoshi"/>
                                 <connections>
-                                    <action selector="settingActionWithSerder:" destination="Ks0-Ub-z5V" eventType="touchUpInside" id="X1w-Ul-ynr"/>
+                                    <action selector="menuActionWithSerder:" destination="Ks0-Ub-z5V" eventType="touchUpInside" id="cBo-mj-Aij"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEi-y9-72g">
@@ -123,7 +123,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="shuoming"/>
                                 <connections>
-                                    <action selector="menuActionWithSerder:" destination="Ks0-Ub-z5V" eventType="touchUpInside" id="dHQ-kb-hia"/>
+                                    <action selector="settingActionWithSerder:" destination="Ks0-Ub-z5V" eventType="touchUpInside" id="j5y-AQ-23h"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XGOBOT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2C-jc-C1v">
@@ -150,7 +150,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表演" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMz-IY-pLp">
                                                 <rect key="frame" x="160.66666666666666" y="203.33333333333331" width="34.666666666666657" height="20.333333333333343"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.12998631599999999" green="0.27555173640000002" blue="0.91703110929999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.30196079609999998" green="0.52941179279999995" blue="0.94509804249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -173,7 +173,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="遥控" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfw-eN-8qf">
                                                 <rect key="frame" x="160.66666666666663" y="203.33333333333331" width="34.666666666666657" height="20.333333333333343"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.12998631599999999" green="0.27555173640000002" blue="0.91703110929999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.24313727020000001" green="0.42352938649999999" blue="0.75686275960000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -214,6 +214,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="debugModeSetting" destination="eDH-Ts-5na" id="lZh-sN-p5h"/>
                         <outlet property="performanceLabel" destination="OMz-IY-pLp" id="yyH-Pi-NAs"/>
                         <outlet property="performanceView" destination="OuF-dp-bG6" id="e8i-ib-Qpv"/>
                         <outlet property="radioControllView" destination="uY6-Yc-HKp" id="RfZ-7Y-YlU"/>
@@ -597,7 +598,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPe-GT-y6s">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPe-GT-y6s">
                                 <rect key="frame" x="762" y="67" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="AuA-Dz-ehq"/>
@@ -1062,7 +1063,7 @@
                                         <color key="textColor" red="0.54663020370000004" green="0.64249151950000005" blue="0.77889400720000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8Q3-bi-7K5">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Q3-bi-7K5">
                                         <rect key="frame" x="97.666666666666643" y="60" width="223.33333333333337" height="32"/>
                                         <segments>
                                             <segment title="低速"/>

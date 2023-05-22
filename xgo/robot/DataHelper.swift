@@ -12,28 +12,30 @@ import Foundation
 class DataHelper {
 
     
-    class func getSendBytes(id: UInt8, funcName: UInt8, data: [UInt8]) -> String {
+    class func getSendBytes(id: Int8, funcName: Int8, data: [Int8]) -> String {
         let length: Int8 = Int8(data.count * 2 + 2)
         
-        var bytes = [UInt8](repeating: 0, count: data.count + 4)
-        bytes[0] = UInt8(id)
-        bytes[1] = UInt8(funcName)
-        bytes[2] = UInt8(length)
+        var bytes = [Int8](repeating: 0, count: data.count + 4)
+        bytes[0] = Int8(id)
+        bytes[1] = Int8(funcName)
+        bytes[2] = Int8(length)
         data.enumerated().forEach { bytes[$0.offset + 3] = $0.element }
         
-        var add: UInt8 = 0x00
+        var add: Int8 = 0x00
         for datum in bytes {
             add = add &+ datum
         }
         bytes[bytes.count - 1] = add
         
-        let resultString = bytesToHex(bytes)
+        let resultString = int8ArrayToHexString(bytes)
+        print("bytesToHEX: \(resultString)")
         return "$\(resultString)#"
 
     }
     
-    class func bytesToHex(_ bytes: [UInt8]) -> String {
-        return bytes.map { String(format: "%02X", $0) }.joined()
+    class func int8ArrayToHexString(_ int8Array: [Int8]) -> String {
+        let data = Data(bytes: int8Array, count: int8Array.count)
+        return data.map { String(format: "%02hhx", $0) }.joined()
     }
 }
 

@@ -35,6 +35,7 @@ class InputAddressViewController: BaseViewController,ChannelObserver {
     }
     
     @IBAction func confirmButton(serder: UIButton) {
+
         if isValidIPAddress(textField.text!){
             UserDefaultsManager.shared.host = textField.text
             SOCKETMANAGER = SocketClient()
@@ -81,6 +82,7 @@ class InputAddressViewController: BaseViewController,ChannelObserver {
         DispatchQueue.main.async {
             let homeVC = HomeViewController.loadFromStoryboard("Main")
             self.navigationController?.pushViewController(homeVC, animated: true)
+            self.navigationController?.viewControllers.remove(at: 0)
         }
     }
     

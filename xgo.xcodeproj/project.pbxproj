@@ -36,7 +36,6 @@
 		0E64F1D829D87F1000AC46AE /* AppValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64F1D729D87F1000AC46AE /* AppValues.swift */; };
 		0EA29A8429E91EB800498232 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA29A8329E91EB800498232 /* DataHelper.swift */; };
 		0EE2E7C529DD5321005E1CD4 /* NetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2E7C429DD5321005E1CD4 /* NetHelper.swift */; };
-		0EE2E7C729DD5669005E1CD4 /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2E7C629DD5669005E1CD4 /* WebSocketClient.swift */; };
 		DA9E1213D1BC99ABE2C07930 /* Pods_xgo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA2CC0AC979875082E40393 /* Pods_xgo.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +74,6 @@
 		0E64F1D729D87F1000AC46AE /* AppValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppValues.swift; sourceTree = "<group>"; };
 		0EA29A8329E91EB800498232 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		0EE2E7C429DD5321005E1CD4 /* NetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetHelper.swift; sourceTree = "<group>"; };
-		0EE2E7C629DD5669005E1CD4 /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
 		D2AAA36D43FAD340C3C810F9 /* Pods-xgo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xgo.debug.xcconfig"; path = "Target Support Files/Pods-xgo/Pods-xgo.debug.xcconfig"; sourceTree = "<group>"; };
 		F1760F23A2DD1DF86A8651A1 /* Pods-xgo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xgo.release.xcconfig"; path = "Target Support Files/Pods-xgo/Pods-xgo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,7 +135,6 @@
 			children = (
 				04E4E0E4299B2413006C856C /* HomeViewController.swift */,
 				04E4E0E8299B2F54006C856C /* InputAddressViewController.swift */,
-				04E4E0EA299B30D0006C856C /* MainNavigationController.swift */,
 				04E4E0EC299B6622006C856C /* BaseSettingViewController.swift */,
 				04E4E0EE299B7843006C856C /* MenuViewController.swift */,
 				04E4E0F2299B8195006C856C /* PerformanceViewController.swift */,
@@ -152,6 +149,7 @@
 		04E4E0F5299B82B6006C856C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04E4E0EA299B30D0006C856C /* MainNavigationController.swift */,
 				04E4E0F0299B7D56006C856C /* MenuShowView.swift */,
 				04E4E0F6299B82DF006C856C /* PerformanceCell.swift */,
 				04208B57299DC74F0008C519 /* CenterStarSlider.swift */,
@@ -174,7 +172,6 @@
 			children = (
 				0E64F1D229D87D7000AC46AE /* SocketClient.swift */,
 				0EE2E7C429DD5321005E1CD4 /* NetHelper.swift */,
-				0EE2E7C629DD5669005E1CD4 /* WebSocketClient.swift */,
 			);
 			path = socket;
 			sourceTree = "<group>";
@@ -336,7 +333,6 @@
 				04E4E0D1299B22F0006C856C /* AppDelegate.swift in Sources */,
 				0E32D35529FE1C58001225E8 /* RobotFunctions.swift in Sources */,
 				04E4E0EF299B7843006C856C /* MenuViewController.swift in Sources */,
-				0EE2E7C729DD5669005E1CD4 /* WebSocketClient.swift in Sources */,
 				0E32D35929FE24C4001225E8 /* UserDefaultsManager.swift in Sources */,
 				04E4E0E7299B25B0006C856C /* LoadNibable.swift in Sources */,
 				04E4E0F3299B8195006C856C /* PerformanceViewController.swift in Sources */,
@@ -498,7 +494,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 224A4DARGK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = xgo/Info.plist;
@@ -512,7 +508,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.luwu.xgobot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -531,7 +527,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 224A4DARGK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = xgo/Info.plist;
@@ -545,7 +541,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.luwu.xgobot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

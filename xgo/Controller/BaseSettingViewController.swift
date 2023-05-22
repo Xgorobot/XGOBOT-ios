@@ -55,6 +55,8 @@ class BaseSettingViewController: BaseViewController {
                 setButtonSelect(index: 1)
             }
         }
+        infoTitle.isHidden = true
+        equipmentInfo.isHidden = true
     }
     
     func setButtonSelect(index: Int) {
@@ -91,12 +93,18 @@ class BaseSettingViewController: BaseViewController {
         yesButton.setTitleColor(UIColor.white, for: .selected)
         yesButton.setTitleColor(UIColor(red: 139, green: 164, blue: 199, alpha: 1), for: .normal)
         
-        yesButton.isSelected = true
+        
         
         noButton.setImage(UIImage(named: "radiobuttonunselect"), for: .normal)
         noButton.setImage(UIImage(named: "radiobuttonselect"), for: .selected)
         noButton.setTitleColor(UIColor.white, for: .selected)
         noButton.setTitleColor(UIColor(red: 139, green: 164, blue: 199, alpha: 1), for: .normal)
+        
+        if UserDefaultsManager.shared.developMode{
+            yesButton.isSelected = true
+        }else{
+            noButton.isSelected = true
+        }
         
         languageButtonArray.append(contentsOf: [systemButton, chineseButton, englishButton])
         developButtonArray.append(contentsOf: [yesButton, noButton])
@@ -121,6 +129,11 @@ class BaseSettingViewController: BaseViewController {
             } else {
                 item.isSelected = false
             }
+        }
+        if serder == yesButton{
+            UserDefaultsManager.shared.developMode = true
+        }else{
+            UserDefaultsManager.shared.developMode = false
         }
     }
     

@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 
 
-class RadioControllViewController: BaseViewController {
+class RadioControllViewController: BaseViewController{
     
     @IBOutlet weak var noLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -40,6 +40,17 @@ class RadioControllViewController: BaseViewController {
         
         webView.isHidden = true
         webView.navigationDelegate = self
+        // 禁止缩放
+        webView.scrollView.maximumZoomScale = 1.0
+        webView.scrollView.minimumZoomScale = 1.0
+
+        // 禁止拖动
+        webView.scrollView.isScrollEnabled = false
+
+        // 自动缩放至webview大小
+        webView.scrollView.contentInsetAdjustmentBehavior = .always
+        imageView.isHidden = true
+        webView.isHidden = false
         
         motionButton.setHorizontalGradientBackground(colorLeft: UIColor(hexString: "#3E67F7")!, colorRight: UIColor(hexString: "#349AFF")!, forState: .normal)
         motionButton.addRoundedBottomCorners()
@@ -52,10 +63,11 @@ class RadioControllViewController: BaseViewController {
         rightButton.setBackgroundImage(UIImage(named: "youzhuan-1"), for: .highlighted)
         
         trotButton.setBackgroundImage(UIImage(named: "wdian"), for: .normal)
-        trotButton.setBackgroundImage(UIImage(named: "dian-1"), for: .highlighted)
+        trotButton.setBackgroundImage(UIImage(named: "dian-1"), for: .selected)
+        trotButton.isSelected = true
         
         walkButton.setBackgroundImage(UIImage(named: "wdian"), for: .normal)
-        walkButton.setBackgroundImage(UIImage(named: "dian-1"), for: .highlighted)
+        walkButton.setBackgroundImage(UIImage(named: "dian-1"), for: .selected)
         
         grabButton.setBackgroundImage(UIImage(named: "wdian"), for: .normal)
         grabButton.setBackgroundImage(UIImage(named: "dian-1"), for: .selected)
@@ -78,7 +90,13 @@ class RadioControllViewController: BaseViewController {
         motionButton.setTitle("运动模式".localized, for: .normal)
         poseButton.setTitle("位姿模式".localized, for: .normal)
         grabButton.setTitle("抓取".localized, for: .normal)
-        
+//        imageViewClick()
+        startCamera()
+        imageViewClick()//进入页面立即加载网页
+    }
+    
+    func startCamera(){
+        RobotFunction.startCamera(state: 1)
     }
     
     @objc func imageViewClick() {
@@ -180,15 +198,15 @@ class RadioControllViewController: BaseViewController {
     }
     
     @IBAction func upAction(serder: UIButton) {
-        RobotFunction.grap(state: 128)
+        RobotFunction.grap(state: -128)
     }
     
     @IBAction func middleAction(serder: UIButton) {
-        RobotFunction.grap(state: 129)
+        RobotFunction.grap(state:  -127)
     }
     
     @IBAction func downAction(serder: UIButton) {
-        RobotFunction.grap(state: 130)
+        RobotFunction.grap(state:  -126)
     }
     
     @IBAction func settingAction(serder: UIButton) {
@@ -202,6 +220,30 @@ class RadioControllViewController: BaseViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        return
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        //期望加载完成隐藏默认图
+            self.imageView.isHidden = true
+            self.webView.isHidden = false
+        //期望加载完成后滚动到网页最中间 @MENGWEI
+            // 获取网页的宽度和高度
+            let width = webView.scrollView.contentSize.width
+            let height = webView.scrollView.contentSize.height
+            // 将网页滚动到水平和垂直方向的中心位置
+            let offsetX = (width - webView.frame.width) / 2
+            let offsetY = (height - webView.frame.height) / 2
+            let offset = CGPoint(x: offsetX, y: offsetY)
+            webView.scrollView.setContentOffset(offset, animated: true)
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error){
+        //期望加载失败时显示默认图
+            self.imageView.isHidden = false
+            self.webView.isHidden = true
+    }
 }
 
 extension RadioControllViewController: WKNavigationDelegate {
