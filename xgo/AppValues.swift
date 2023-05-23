@@ -14,3 +14,8 @@ var SOCKETMANAGER:SocketClient?
 //DataHelper
 public let START: Int8 = 0x24 // $的ASCII码值
 public let END: Int8 = 0x23 // #的ASCII码值
+
+public var ROBOT_height: Int8 = 60 // $的ASCII码值
+public var ROBOT_stepLength: Int8 = 60 // #的ASCII码值
+public var ROBOT_balance: Bool = false // $的ASCII码值
+public var ROBOT_speed: Int8 = 1 // #的ASCII码值
