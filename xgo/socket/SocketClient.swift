@@ -49,7 +49,7 @@ class SocketClient: ChannelObserver{
     func channel(_ client: ClientChannel, didRead buffer: ByteBuffer) {
         let str = String(data: buffer.toData(), encoding: .utf8) ?? "NULL"
         print("\(client)  read: \(buffer.count) \(str)")
-        client.write(data: "rcv: \(str)".data(using: .utf8)!)
+//        client.write(data: "rcv: \(str)".data(using: .utf8)!)
         observer?.channel(client, didRead: buffer)
     }
     

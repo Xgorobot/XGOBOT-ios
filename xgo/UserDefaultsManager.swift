@@ -32,7 +32,7 @@ class UserDefaultsManager {
     
     var cameraPort: Int {
         get {
-            return UserDefaults.standard.integer(forKey: Keys.cameraPort) == 0 ? 6060 : UserDefaults.standard.integer(forKey: Keys.cameraPort)
+            return UserDefaults.standard.integer(forKey: Keys.cameraPort) == 0 ? 6500 : UserDefaults.standard.integer(forKey: Keys.cameraPort)
         }
         set { UserDefaults.standard.set(newValue, forKey: Keys.cameraPort) }
     }

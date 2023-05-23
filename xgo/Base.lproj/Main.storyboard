@@ -90,7 +90,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                                 <color key="backgroundColor" red="0.082670010626316071" green="0.10738370567560196" blue="0.33510559797286987" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAD-QB-Kp7">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAD-QB-Kp7">
                                 <rect key="frame" x="10" y="67" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Blr-ae-lNU"/>
@@ -851,9 +851,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="抓取"/>
-                                <connections>
-                                    <action selector="grabWithSerder:" destination="bi6-TO-6zR" eventType="touchUpInside" id="Fu4-ZB-0eF"/>
-                                </connections>
                             </button>
                             <webView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cct-nO-isA">
                                 <rect key="frame" x="243.66666666666666" y="99.666666666666671" width="324.66666666666674" height="175.66666666666663"/>
@@ -1004,7 +1001,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JZY-sD-6st" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="805" y="3543"/>
+            <point key="canvasLocation" x="882" y="2785"/>
         </scene>
         <!--Radio Controll Setting View Controller-->
         <scene sceneID="FXR-FL-OO8">

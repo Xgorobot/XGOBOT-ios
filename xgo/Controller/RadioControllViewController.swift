@@ -38,7 +38,6 @@ class RadioControllViewController: BaseViewController, WKNavigationDelegate{
         
         poseModelVC.view.isHidden = true
         
-        webView.isHidden = true
         webView.navigationDelegate = self
         // 禁止缩放
         webView.scrollView.maximumZoomScale = 1.0
@@ -99,6 +98,8 @@ class RadioControllViewController: BaseViewController, WKNavigationDelegate{
     
     @objc func imageViewClick() {
         webView.load(URLRequest(url: RobotFunction.getWebUrl()))
+        webView.isHidden = false
+        imageView.isHidden = true
     }
     
     @IBAction func motionAction(serder: UIButton!) {
@@ -219,6 +220,8 @@ class RadioControllViewController: BaseViewController, WKNavigationDelegate{
     }
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+//            self.imageView.isHidden = true
+//            self.webView.isHidden = false
         return
     }
     
@@ -234,7 +237,7 @@ class RadioControllViewController: BaseViewController, WKNavigationDelegate{
             let offsetX = (width - webView.frame.width) / 2
             let offsetY = (height - webView.frame.height) / 2
             let offset = CGPoint(x: offsetX, y: offsetY)
-            webView.scrollView.setContentOffset(offset, animated: true)
+            webView.scrollView.setContentOffset(offset, animated: false)
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error){

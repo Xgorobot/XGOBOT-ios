@@ -49,6 +49,10 @@ class InputAddressViewController: BaseViewController,ChannelObserver {
             showError("The IP address you entered is not valid.")
         }
         
+//            let homeVC = HomeViewController.loadFromStoryboard("Main")
+//            self.navigationController?.pushViewController(homeVC, animated: true)
+//            self.navigationController?.viewControllers.remove(at: 0)
+        
     }
     
     func isValidIPAddress(_ ipAddress: String) -> Bool {

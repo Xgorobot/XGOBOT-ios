@@ -53,11 +53,13 @@ class RadioControllSettingViewController: BaseViewController {
         
         if let heightKey = UserDefaults.standard.object(forKey: "HeightKey") as? Int {
             heightValue.text = "\(heightKey)"
+            heightSlider.value = Float(heightKey)
             RobotFunction.heightControl(height: 75 + heightKey * 2 / 5)
         }
         
         if let rangeKey = UserDefaults.standard.object(forKey: "RangeKey") as? Int {
             rangeValue.text = "\(rangeKey)"
+            setpSlider.value = Float(rangeKey)
             RobotFunction.setStepLength(length: rangeKey)
         }
         
