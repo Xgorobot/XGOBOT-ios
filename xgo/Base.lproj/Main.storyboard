@@ -90,7 +90,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                                 <color key="backgroundColor" red="0.082670010626316071" green="0.10738370567560196" blue="0.33510559797286987" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAD-QB-Kp7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAD-QB-Kp7">
                                 <rect key="frame" x="10" y="67" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Blr-ae-lNU"/>
@@ -631,7 +631,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jfB-nA-quy">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jfB-nA-quy">
                                         <rect key="frame" x="43.666666666666629" y="72" width="51" height="31"/>
                                         <connections>
                                             <action selector="changeSwitchWithSerder:" destination="JB9-KJ-bEY" eventType="valueChanged" id="zHo-p4-AdK"/>

@@ -106,6 +106,14 @@ class CenterStarSlider: UIControl {
                     fillLine.frame = CGRect(x: self.center.x, y: self.center.y - (fillLineHeight / 2), width: 0, height: fillLineHeight)
                 }
             }
+            let percent = (self.frame.width - 20) / 2 / maxValue
+            if imageView.center.x < circle.center.x {
+                let value = -(imageView.center.x - circle.center.x)
+                self.callBack?(value / percent)
+            } else {
+                let value = circle.center.x - imageView.center.x
+                self.callBack?(value / percent)
+            }
         }
         return true
     }
