@@ -44,6 +44,7 @@ class CenterStarSlider: UIControl {
         
         fillLine = UIView(frame: CGRect(x: self.center.x - (fillLineHeight / 2), y: self.center.y - (fillLineHeight / 2), width: 0, height: fillLineHeight))
         fillLine.backgroundColor = fillLineColor
+        fillLine.isUserInteractionEnabled = false
         self.addSubview(fillLine)
         
         circle = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
@@ -51,6 +52,7 @@ class CenterStarSlider: UIControl {
         circle.backgroundColor = backgroundLineColor
         circle.layer.cornerRadius = 5
         circle.layer.masksToBounds = true
+        circle.isUserInteractionEnabled = false
         self.addSubview(circle)
         
         imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: imageViewSize.width, height: imageViewSize.height))
@@ -80,7 +82,7 @@ class CenterStarSlider: UIControl {
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         let point = touch.location(in: self)
         // 扩大手势范围
-        let tempTouchPoint = CGRect(x: self.imageView.frame.origin.x - (self.imageView.frame.width / 1.5), y: self.frame.origin.y, width: self.imageView.frame.width * 3, height: self.frame.height)
+        let tempTouchPoint = CGRect(x: self.imageView.frame.origin.x - (self.imageView.frame.width / 2), y: self.frame.origin.y, width: self.imageView.frame.width * 2, height: self.frame.height)
         if tempTouchPoint.contains(point) {
             isSlide = true
         }
