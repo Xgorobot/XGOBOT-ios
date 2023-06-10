@@ -10,6 +10,7 @@ target 'xgo' do
   pod 'Alamofire'
   pod 'Starscream'
   pod 'libSwiftSocket'
+  pod 'SwiftSocket'
   pod 'IQKeyboardManagerSwift'
   
 end

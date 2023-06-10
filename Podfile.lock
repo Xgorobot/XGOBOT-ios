@@ -6,6 +6,7 @@ PODS:
   - libSwiftSocket/core (1.2.7)
   - SnapKit (5.6.0)
   - Starscream (4.0.4)
+  - SwiftSocket (2.0.2)
 
 DEPENDENCIES:
   - Alamofire
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - libSwiftSocket
   - SnapKit
   - Starscream
+  - SwiftSocket
 
 SPEC REPOS:
   trunk:
@@ -21,6 +23,7 @@ SPEC REPOS:
     - libSwiftSocket
     - SnapKit
     - Starscream
+    - SwiftSocket
 
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
@@ -28,7 +31,8 @@ SPEC CHECKSUMS:
   libSwiftSocket: 1eff33b7b6163d685c7d48d3a7acf27c8b7387ef
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
+  SwiftSocket: 6f4c9c63fbc5c1d61188936bb3c599fd546f40ae
 
-PODFILE CHECKSUM: 92428c28ba989111e8d13836358075f37f3e8036
+PODFILE CHECKSUM: fbb2fa151d2f48b32b06459487b272013419c2ca
 
 COCOAPODS: 1.12.0
