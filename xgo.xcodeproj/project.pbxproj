@@ -35,7 +35,7 @@
 		0E64F1D629D87E8100AC46AE /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64F1D529D87E8100AC46AE /* StringUtils.swift */; };
 		0E64F1D829D87F1000AC46AE /* AppValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64F1D729D87F1000AC46AE /* AppValues.swift */; };
 		0EA29A8429E91EB800498232 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA29A8329E91EB800498232 /* DataHelper.swift */; };
-		0EAB2E592A34DF770038B050 /* UDPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB2E582A34DF770038B050 /* UDPHelper.swift */; };
+		0EAB2E692A356AFB0038B050 /* UDPSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB2E682A356AFB0038B050 /* UDPSender.swift */; };
 		0EE2E7C529DD5321005E1CD4 /* NetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2E7C429DD5321005E1CD4 /* NetHelper.swift */; };
 		DA9E1213D1BC99ABE2C07930 /* Pods_xgo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA2CC0AC979875082E40393 /* Pods_xgo.framework */; };
 /* End PBXBuildFile section */
@@ -74,7 +74,7 @@
 		0E64F1D529D87E8100AC46AE /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		0E64F1D729D87F1000AC46AE /* AppValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppValues.swift; sourceTree = "<group>"; };
 		0EA29A8329E91EB800498232 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
-		0EAB2E582A34DF770038B050 /* UDPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPHelper.swift; sourceTree = "<group>"; };
+		0EAB2E682A356AFB0038B050 /* UDPSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPSender.swift; sourceTree = "<group>"; };
 		0EE2E7C429DD5321005E1CD4 /* NetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetHelper.swift; sourceTree = "<group>"; };
 		D2AAA36D43FAD340C3C810F9 /* Pods-xgo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xgo.debug.xcconfig"; path = "Target Support Files/Pods-xgo/Pods-xgo.debug.xcconfig"; sourceTree = "<group>"; };
 		F1760F23A2DD1DF86A8651A1 /* Pods-xgo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xgo.release.xcconfig"; path = "Target Support Files/Pods-xgo/Pods-xgo.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 			children = (
 				0E64F1D229D87D7000AC46AE /* SocketClient.swift */,
 				0EE2E7C429DD5321005E1CD4 /* NetHelper.swift */,
-				0EAB2E582A34DF770038B050 /* UDPHelper.swift */,
+				0EAB2E682A356AFB0038B050 /* UDPSender.swift */,
 			);
 			path = socket;
 			sourceTree = "<group>";
@@ -334,6 +334,7 @@
 				0E64F1D829D87F1000AC46AE /* AppValues.swift in Sources */,
 				0E64F1D329D87D7000AC46AE /* SocketClient.swift in Sources */,
 				04E4E0D1299B22F0006C856C /* AppDelegate.swift in Sources */,
+				0EAB2E692A356AFB0038B050 /* UDPSender.swift in Sources */,
 				0E32D35529FE1C58001225E8 /* RobotFunctions.swift in Sources */,
 				04E4E0EF299B7843006C856C /* MenuViewController.swift in Sources */,
 				0E32D35929FE24C4001225E8 /* UserDefaultsManager.swift in Sources */,
@@ -343,7 +344,6 @@
 				04E04F99299CC02300CF7482 /* PoseModelViewController.swift in Sources */,
 				0EE2E7C529DD5321005E1CD4 /* NetHelper.swift in Sources */,
 				0464E56A2A088571003AF379 /* BaseViewController.swift in Sources */,
-				0EAB2E592A34DF770038B050 /* UDPHelper.swift in Sources */,
 				04E4E0ED299B6622006C856C /* BaseSettingViewController.swift in Sources */,
 				04208B58299DC74F0008C519 /* CenterStarSlider.swift in Sources */,
 				04E4E0F1299B7D56006C856C /* MenuShowView.swift in Sources */,
