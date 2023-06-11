@@ -93,4 +93,20 @@ class InputAddressViewController: BaseViewController,ChannelObserver {
     
     func channel(_ client: libSwiftSocket.ClientChannel, didWrite buffer: libSwiftSocket.ByteBuffer, userInfo: [String : Any]?) {
     }
+    
+    @IBAction func controlsButtonClick(_ sender: Any) {
+        
+        let vc = ControlsViewController.loadFromStoryboard("Main")
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        
+    }
+    
+    @IBAction func wifiButtonClick(_ sender: Any) {
+        
+        let vc = WiFiViewController.loadFromStoryboard("Main")
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
 }

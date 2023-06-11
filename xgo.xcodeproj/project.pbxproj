@@ -37,6 +37,8 @@
 		0EA29A8429E91EB800498232 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA29A8329E91EB800498232 /* DataHelper.swift */; };
 		0EAB2E692A356AFB0038B050 /* UDPSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB2E682A356AFB0038B050 /* UDPSender.swift */; };
 		0EE2E7C529DD5321005E1CD4 /* NetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2E7C429DD5321005E1CD4 /* NetHelper.swift */; };
+		76CAB25D2A361EE4000729A3 /* ControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CAB25C2A361EE4000729A3 /* ControlsViewController.swift */; };
+		76CAB25F2A361EF5000729A3 /* WiFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CAB25E2A361EF5000729A3 /* WiFiViewController.swift */; };
 		DA9E1213D1BC99ABE2C07930 /* Pods_xgo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA2CC0AC979875082E40393 /* Pods_xgo.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		0EA29A8329E91EB800498232 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		0EAB2E682A356AFB0038B050 /* UDPSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPSender.swift; sourceTree = "<group>"; };
 		0EE2E7C429DD5321005E1CD4 /* NetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetHelper.swift; sourceTree = "<group>"; };
+		76CAB25C2A361EE4000729A3 /* ControlsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsViewController.swift; sourceTree = "<group>"; };
+		76CAB25E2A361EF5000729A3 /* WiFiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiViewController.swift; sourceTree = "<group>"; };
 		D2AAA36D43FAD340C3C810F9 /* Pods-xgo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xgo.debug.xcconfig"; path = "Target Support Files/Pods-xgo/Pods-xgo.debug.xcconfig"; sourceTree = "<group>"; };
 		F1760F23A2DD1DF86A8651A1 /* Pods-xgo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xgo.release.xcconfig"; path = "Target Support Files/Pods-xgo/Pods-xgo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +148,8 @@
 				04E04F96299CB6CD00CF7482 /* RadioControllSettingViewController.swift */,
 				04E04F98299CC02300CF7482 /* PoseModelViewController.swift */,
 				0464E5692A088571003AF379 /* BaseViewController.swift */,
+				76CAB25C2A361EE4000729A3 /* ControlsViewController.swift */,
+				76CAB25E2A361EF5000729A3 /* WiFiViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -333,8 +339,10 @@
 				04E4E0E9299B2F54006C856C /* InputAddressViewController.swift in Sources */,
 				0E64F1D829D87F1000AC46AE /* AppValues.swift in Sources */,
 				0E64F1D329D87D7000AC46AE /* SocketClient.swift in Sources */,
+				76CAB25D2A361EE4000729A3 /* ControlsViewController.swift in Sources */,
 				04E4E0D1299B22F0006C856C /* AppDelegate.swift in Sources */,
 				0EAB2E692A356AFB0038B050 /* UDPSender.swift in Sources */,
+				76CAB25F2A361EF5000729A3 /* WiFiViewController.swift in Sources */,
 				0E32D35529FE1C58001225E8 /* RobotFunctions.swift in Sources */,
 				04E4E0EF299B7843006C856C /* MenuViewController.swift in Sources */,
 				0E32D35929FE24C4001225E8 /* UserDefaultsManager.swift in Sources */,
