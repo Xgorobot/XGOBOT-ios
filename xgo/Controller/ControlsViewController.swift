@@ -9,12 +9,25 @@ import UIKit
 
 class ControlsViewController: BaseViewController {
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var endButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func backButtonClick(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func statrButtonClick(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func endButtonClick(_ sender: UIButton) {
+        
     }
     
 }
