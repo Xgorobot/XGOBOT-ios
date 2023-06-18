@@ -23,11 +23,11 @@ class ControlsViewController: BaseViewController {
     
     
     @IBAction func statrButtonClick(_ sender: UIButton) {
-        
+        UDPSENDER?.sendUDPMessage(message: "0")
     }
     
     @IBAction func endButtonClick(_ sender: UIButton) {
-        
+        UDPSENDER?.sendUDPMessage(message: "1")
     }
     
 }

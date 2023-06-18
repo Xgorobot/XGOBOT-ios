@@ -10,6 +10,7 @@ import UIKit
 
 
 var SOCKETMANAGER:SocketClient?
+var UDPSENDER:UDPSender?
 
 //DataHelper
 public let START: Int8 = 0x24 // $的ASCII码值

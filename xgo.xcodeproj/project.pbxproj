@@ -36,6 +36,7 @@
 		0E64F1D829D87F1000AC46AE /* AppValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64F1D729D87F1000AC46AE /* AppValues.swift */; };
 		0EA29A8429E91EB800498232 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA29A8329E91EB800498232 /* DataHelper.swift */; };
 		0EAB2E692A356AFB0038B050 /* UDPSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB2E682A356AFB0038B050 /* UDPSender.swift */; };
+		0ED4AC302A3EFBB9005FE9ED /* Japanese.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ED4AC2F2A3EFBB9005FE9ED /* Japanese.strings */; };
 		0EE2E7C529DD5321005E1CD4 /* NetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE2E7C429DD5321005E1CD4 /* NetHelper.swift */; };
 		76CAB25D2A361EE4000729A3 /* ControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CAB25C2A361EE4000729A3 /* ControlsViewController.swift */; };
 		76CAB25F2A361EF5000729A3 /* WiFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CAB25E2A361EF5000729A3 /* WiFiViewController.swift */; };
@@ -77,6 +78,7 @@
 		0E64F1D729D87F1000AC46AE /* AppValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppValues.swift; sourceTree = "<group>"; };
 		0EA29A8329E91EB800498232 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		0EAB2E682A356AFB0038B050 /* UDPSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPSender.swift; sourceTree = "<group>"; };
+		0ED4AC2F2A3EFBB9005FE9ED /* Japanese.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Japanese.strings; sourceTree = "<group>"; };
 		0EE2E7C429DD5321005E1CD4 /* NetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetHelper.swift; sourceTree = "<group>"; };
 		76CAB25C2A361EE4000729A3 /* ControlsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsViewController.swift; sourceTree = "<group>"; };
 		76CAB25E2A361EF5000729A3 /* WiFiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				0E32D35829FE24C4001225E8 /* UserDefaultsManager.swift */,
 				04BAA8082A137342005ED804 /* Chinese.strings */,
 				04BAA80A2A137359005ED804 /* English.strings */,
+				0ED4AC2F2A3EFBB9005FE9ED /* Japanese.strings */,
 			);
 			path = xgo;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BAA8092A137342005ED804 /* Chinese.strings in Resources */,
+				0ED4AC302A3EFBB9005FE9ED /* Japanese.strings in Resources */,
 				04E4E0DD299B22F1006C856C /* LaunchScreen.storyboard in Resources */,
 				04BAA80B2A137359005ED804 /* English.strings in Resources */,
 				04E4E0DA299B22F1006C856C /* Assets.xcassets in Resources */,

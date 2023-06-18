@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.rootViewController = MainNavigationController(rootViewController: InputAddressViewController.loadFromStoryboard("Main"))
         window?.makeKeyAndVisible()
-        
+        UDPSENDER = UDPSender()
         return true
     }
     

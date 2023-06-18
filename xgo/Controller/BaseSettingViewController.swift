@@ -14,6 +14,7 @@ class BaseSettingViewController: BaseViewController {
     @IBOutlet weak var systemButton: UIButton!
     @IBOutlet weak var chineseButton: UIButton!
     @IBOutlet weak var englishButton: UIButton!
+    @IBOutlet weak var japaneseButton: UIButton!
     var languageButtonArray: [UIButton]! = []
     
     @IBOutlet weak var yesButton: UIButton!
@@ -45,6 +46,7 @@ class BaseSettingViewController: BaseViewController {
         noButton.setTitle("否".localized, for: .normal)
         chineseButton.setTitle("中文".localized, for: .normal)
         englishButton.setTitle("English".localized, for: .normal)
+        japaneseButton.setTitle("日本".localized, for: .normal)
         
         if let localLanguage = UserDefaults.standard.string(forKey: "languageFileName") {
             if localLanguage == "Auto" {
@@ -88,6 +90,12 @@ class BaseSettingViewController: BaseViewController {
         englishButton.setTitleColor(UIColor.white, for: .selected)
         englishButton.setTitleColor(UIColor(red: 139, green: 164, blue: 199, alpha: 1), for: .normal)
         
+        
+        japaneseButton.setImage(UIImage(named: "radiobuttonunselect"), for: .normal)
+        japaneseButton.setImage(UIImage(named: "radiobuttonselect"), for: .selected)
+        japaneseButton.setTitleColor(UIColor.white, for: .selected)
+        japaneseButton.setTitleColor(UIColor(red: 139, green: 164, blue: 199, alpha: 1), for: .normal)
+        
         yesButton.setImage(UIImage(named: "radiobuttonunselect"), for: .normal)
         yesButton.setImage(UIImage(named: "radiobuttonselect"), for: .selected)
         yesButton.setTitleColor(UIColor.white, for: .selected)
@@ -117,6 +125,8 @@ class BaseSettingViewController: BaseViewController {
             LanguageManager.shared.switchLanguage("Chinese")
         } else if serder.currentTitle == "English" {
             LanguageManager.shared.switchLanguage("English")
+        } else if serder.currentTitle == "日本" {
+            LanguageManager.shared.switchLanguage("Japanese")
         } else {
             LanguageManager.shared.switchLanguage("Auto")
         }
