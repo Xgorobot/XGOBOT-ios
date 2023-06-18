@@ -166,8 +166,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIFI已连接" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f85-mh-LpL">
-                                <rect key="frame" x="388" y="79" width="76.333333333333314" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIFI Connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f85-mh-LpL">
+                                <rect key="frame" x="371.33333333333331" y="79" width="109.66666666666669" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.54663020370000004" green="0.64249151950000005" blue="0.77889400720000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -253,6 +253,7 @@
                         <outlet property="performanceView" destination="OuF-dp-bG6" id="e8i-ib-Qpv"/>
                         <outlet property="radioControllView" destination="uY6-Yc-HKp" id="RfZ-7Y-YlU"/>
                         <outlet property="radioLabel" destination="zfw-eN-8qf" id="tiW-fq-X3L"/>
+                        <outlet property="wifiLabel" destination="f85-mh-LpL" id="TFI-bw-50B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iM6-4A-wXw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -347,7 +348,7 @@
                                             <action selector="languageButtonClickWithSerder:" destination="ZzL-st-gi8" eventType="touchUpInside" id="ZhJ-f5-cAI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhc-4D-1Vj" userLabel="Japanese Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhc-4D-1Vj">
                                         <rect key="frame" x="225" y="0.0" width="75" height="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
                                         <state key="normal" title="日本" image="radiobuttonunselect"/>

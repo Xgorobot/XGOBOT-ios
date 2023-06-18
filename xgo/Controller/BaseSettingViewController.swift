@@ -53,6 +53,8 @@ class BaseSettingViewController: BaseViewController {
                 setButtonSelect(index: 0)
             } else if localLanguage == "English" {
                 setButtonSelect(index: 2)
+            } else if localLanguage == "Japanese"{
+                setButtonSelect(index: 3)
             } else {
                 setButtonSelect(index: 1)
             }
@@ -114,7 +116,7 @@ class BaseSettingViewController: BaseViewController {
             noButton.isSelected = true
         }
         
-        languageButtonArray.append(contentsOf: [systemButton, chineseButton, englishButton])
+        languageButtonArray.append(contentsOf: [systemButton, chineseButton, englishButton, japaneseButton])
         developButtonArray.append(contentsOf: [yesButton, noButton])
         
     }

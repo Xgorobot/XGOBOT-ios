@@ -11,6 +11,7 @@ enum LanguageName : String {
     
     case chinese
     case english
+    case japanese
     
     var languageName: String {
         switch self {
@@ -18,6 +19,8 @@ enum LanguageName : String {
             return "Chinese"
         case .english:
             return "English"
+        case .japanese:
+            return "Japanese"
         }
     }
 }

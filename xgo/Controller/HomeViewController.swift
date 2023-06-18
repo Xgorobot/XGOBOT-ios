@@ -15,6 +15,7 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var radioLabel: UILabel!
     
     @IBOutlet weak var debugModeSetting: UIButton!
+    @IBOutlet weak var wifiLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class HomeViewController: BaseViewController {
         
         performanceLabel.text = "表演".localized
         radioLabel.text = "遥控".localized
+        wifiLabel.text = "已连接".localized
         
     }
     

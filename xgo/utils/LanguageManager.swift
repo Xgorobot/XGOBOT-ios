@@ -20,6 +20,8 @@ class LanguageManager {
                 lang = locale.languageCode ?? "cn"
                 if lang == "zh" {
                     lang = "Chinese"
+                } else if lang == "jp"{
+                    lang = "Japanese"
                 } else {
                     lang = "English"
                 }
@@ -31,6 +33,8 @@ class LanguageManager {
             lang = locale.languageCode ?? "cn"
             if lang == "zh" {
                 lang = "Chinese"
+            } else if lang == "jp"{
+                lang = "Japanese"
             } else {
                 lang = "English"
             }
@@ -43,6 +47,8 @@ class LanguageManager {
             let locale = Locale.current.languageCode ?? "cn"
             if locale == "zh" {
                 self.languageFileName = "Chinese"
+            } else if locale == "jp"{
+                self.languageFileName = "Japanese"
             } else {
                 self.languageFileName = "English"
             }
