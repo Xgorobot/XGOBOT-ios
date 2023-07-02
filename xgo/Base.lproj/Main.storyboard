@@ -81,6 +81,12 @@
                                     <action selector="settingActionWithSerder:" destination="Ks0-Ub-z5V" eventType="touchUpInside" id="CZd-Bq-wGn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6s-T2-IE7">
+                                <rect key="frame" x="812" y="373" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hYo-1M-KlD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -88,9 +94,11 @@
                             <constraint firstItem="hYo-1M-KlD" firstAttribute="trailing" secondItem="1Qk-4H-HxA" secondAttribute="trailing" constant="20" id="7Kc-HM-oKd"/>
                             <constraint firstItem="tek-5O-72u" firstAttribute="top" secondItem="gwK-om-bH7" secondAttribute="bottom" constant="10" id="7Zd-81-m09"/>
                             <constraint firstItem="tek-5O-72u" firstAttribute="centerX" secondItem="hYo-1M-KlD" secondAttribute="centerX" id="AGk-Sy-J1c"/>
+                            <constraint firstAttribute="trailing" secondItem="Y6s-T2-IE7" secondAttribute="trailing" constant="40" id="CFg-0s-Pbf"/>
                             <constraint firstAttribute="bottom" secondItem="MrV-97-49r" secondAttribute="bottom" id="GeD-GJ-Nab"/>
                             <constraint firstItem="gwK-om-bH7" firstAttribute="leading" secondItem="tek-5O-72u" secondAttribute="leading" id="LNr-pU-tx0"/>
                             <constraint firstItem="LLI-Vg-FWB" firstAttribute="top" secondItem="hYo-1M-KlD" secondAttribute="top" constant="20" id="M9i-7f-kWg"/>
+                            <constraint firstAttribute="bottom" secondItem="Y6s-T2-IE7" secondAttribute="bottom" constant="20" id="Sos-gC-fhj"/>
                             <constraint firstItem="tek-5O-72u" firstAttribute="centerY" secondItem="fov-sB-oxm" secondAttribute="centerY" id="WcQ-oN-6x2"/>
                             <constraint firstItem="MrV-97-49r" firstAttribute="leading" secondItem="fov-sB-oxm" secondAttribute="leading" id="dAQ-v5-spY"/>
                             <constraint firstItem="1Qk-4H-HxA" firstAttribute="top" secondItem="hYo-1M-KlD" secondAttribute="top" constant="20" id="dO9-n5-10b"/>
@@ -106,6 +114,7 @@
                         <outlet property="confirmButton" destination="Gwl-6i-CiI" id="ehc-WE-vx9"/>
                         <outlet property="textField" destination="tek-5O-72u" id="djN-0e-gGh"/>
                         <outlet property="titleLabel" destination="gwK-om-bH7" id="WCX-9o-uMX"/>
+                        <outlet property="verLabel" destination="Y6s-T2-IE7" id="MeC-tm-nqk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0y-Av-rfd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
