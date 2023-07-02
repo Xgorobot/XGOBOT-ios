@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import libSwiftSocket
 
-class BaseSettingViewController: BaseViewController {
+class BaseSettingViewController: BaseViewController,ChannelObserver {
+    
+    
+    
     
     @IBOutlet weak var equipmentInfo: UILabel!
     
@@ -61,6 +65,7 @@ class BaseSettingViewController: BaseViewController {
         }
         infoTitle.isHidden = true
         equipmentInfo.isHidden = true
+        setSocketListener()
     }
     
     func setButtonSelect(index: Int) {
@@ -151,6 +156,51 @@ class BaseSettingViewController: BaseViewController {
     
     @IBAction func backAction(serder: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+        
+    func setSocketListener() {
+        SOCKETMANAGER?.setObserver(observer: self)
+        RobotFunction.loadDeviceVersion()
+    }
+    
+    func channel(_ client: libSwiftSocket.ClientChannel, didConnect host: String, port: Int) {
+        
+    }
+    
+    func channel(_ client: libSwiftSocket.ClientChannel, didWrite buffer: libSwiftSocket.ByteBuffer, userInfo: [String : Any]?) {
+        
+    }
+    
+    func channel(_ client: libSwiftSocket.ClientChannel, didRead buffer: libSwiftSocket.ByteBuffer) {
+        DispatchQueue.main.async {
+            // 在主线程上执行的代码
+            let msg = String(data: buffer.toData(), encoding: .utf8) ?? "NULL"
+            
+            let tag = msg[msg.index(msg.startIndex, offsetBy: 3)..<msg.index(msg.startIndex, offsetBy: 5)]
+            let data = msg[msg.index(msg.startIndex, offsetBy: 7)..<msg.index(msg.startIndex, offsetBy: 9)]
+
+            print("onMsgReceived: tag: \(tag)  data: \(data)")
+
+            if tag == "34" {
+                if data == "00" {
+                    DispatchQueue.main.async {
+                        self.equipmentInfo.text = "XGO-lite2"
+                        self.infoTitle.isHidden = false
+                        self.equipmentInfo.isHidden = false
+                    }
+                } else if data == "01" {
+                    DispatchQueue.main.async {
+                        self.equipmentInfo.text = "XGO-mini2"
+                        self.infoTitle.isHidden = false
+                        self.equipmentInfo.isHidden = false
+                    }
+                }
+            }
+        }
+    }
+    
+    func channel(_ client: libSwiftSocket.ClientChannel, didDisconnect error: libSwiftSocket.ChannelError?) {
+        
     }
     
 }
