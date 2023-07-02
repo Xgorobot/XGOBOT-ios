@@ -32,6 +32,11 @@ class WiFiViewController: BaseViewController {
         codeButton.setHorizontalGradientBackground(colorLeft: UIColor(hexString: "#3E67F7")!, colorRight: UIColor(hexString: "#349AFF")!, forState: .normal)
         codeButton.layer.cornerRadius = 20
         codeButton.layer.masksToBounds = true
+        titleLabel.text = "机器人配网".localized
+        descLabel.text = "请输入WI-FI名称和密码".localized
+        wifiField.placeholder = "请输入WI-FI".localized
+        passwordField.placeholder = "请输入密码".localized
+        codeButton.titleLabel?.text = "生成二维码".localized
         
     }
     

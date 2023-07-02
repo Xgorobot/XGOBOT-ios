@@ -69,3 +69,8 @@
 "Y轴滚动" = "Pitch";
 "Z轴滚动" = "Yaw";
 "已连接" = "Wi-Fi connected";
+"机器人配网" = "WI-FI setting";
+"请输入WI-FI名称和密码" = "please enter Wi-Fi ssid and password";
+"请输入WI-FI" = "please enter Wi-Fi ssid";
+"请输入密码" = "please enter password";
+"生成二维码" = "generate QR code";
