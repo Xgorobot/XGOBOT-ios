@@ -34,6 +34,13 @@ extension String {
     static var languages: [String] {
         return ["cn","en"]
     }
+    
+    static func getStringWidth(str: String, font: UIFont) -> CGFloat {
+        let attributedText = NSAttributedString(string: str, attributes: [NSAttributedString.Key.font: font]) // 替换为您需要的字体和字号
+        let textSize = attributedText.size()
+        return textSize.width
+    }
+    
 }
 
 // 获取类型名
