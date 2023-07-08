@@ -1676,7 +1676,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="生成二维码"/>
                                 <connections>
                                     <action selector="codeButtonClick:" destination="eUs-Tr-xvn" eventType="touchUpInside" id="DLI-Hk-a40"/>
                                 </connections>
@@ -1711,6 +1710,7 @@
                     <navigationItem key="navigationItem" id="zbT-0q-vaX"/>
                     <connections>
                         <outlet property="codeButton" destination="YnK-K8-f3E" id="OZN-NR-JRT"/>
+                        <outlet property="codeButtonWidth" destination="OCl-Fp-z0e" id="AHx-Nc-b6V"/>
                         <outlet property="codeImage" destination="lTt-X5-ShH" id="Up9-GM-Hyp"/>
                         <outlet property="descLabel" destination="xqx-nk-LBw" id="mFg-jj-HeR"/>
                         <outlet property="passwordField" destination="mi6-3o-yKh" id="XzW-HC-pxq"/>

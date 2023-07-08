@@ -15,6 +15,7 @@ class WiFiViewController: BaseViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var codeImage: UIImageView!
     @IBOutlet weak var codeButton: UIButton!
+    @IBOutlet weak var codeButtonWidth: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,8 @@ class WiFiViewController: BaseViewController {
         descLabel.text = "请输入WI-FI名称和密码".localized
         wifiField.placeholder = "请输入WI-FI".localized
         passwordField.placeholder = "请输入密码".localized
-        codeButton.titleLabel?.text = "生成二维码".localized
+        codeButton.setTitle("生成二维码".localized, for: .normal)
+        codeButtonWidth.constant = String.getStringWidth(str: "生成二维码".localized, font: .systemFont(ofSize: 14)) + 40
         
     }
     
