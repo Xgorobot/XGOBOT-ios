@@ -16,10 +16,10 @@ class LanguageManager {
         if let localLanguage =
             UserDefaults.standard.string(forKey: "languageFileName") {
             if localLanguage == "Auto" {
-                lang = Locale.preferredLanguages.first ?? "cn"
-                if lang == "zh-Hans-US" {
+                lang = Locale.preferredLanguages.first ?? "English"
+                if lang.hasPrefix("zh") {
                     lang = "Chinese"
-                } else if lang == "ja-US"{
+                } else if lang.hasPrefix("ja") {
                     lang = "Japanese"
                 } else {
                     lang = "English"
@@ -28,10 +28,10 @@ class LanguageManager {
                 lang = localLanguage
             }
         }else {
-            lang = Locale.preferredLanguages.first ?? "cn"
-            if lang == "zh-Hans-US" {
+            lang = Locale.preferredLanguages.first ?? "English"
+            if lang.hasPrefix("zh") {
                 lang = "Chinese"
-            } else if lang == "ja-US"{
+            } else if lang.hasPrefix("ja") {
                 lang = "Japanese"
             } else {
                 lang = "English"
@@ -42,10 +42,10 @@ class LanguageManager {
     
     func switchLanguage(_ languageFileName: String) {
         if languageFileName == "Auto" {
-            let locale = Locale.preferredLanguages.first ?? "cn"
-            if locale == "zh-Hans-US" {
+            let locale = Locale.preferredLanguages.first ?? "English"
+            if locale.hasPrefix("zh") {
                 self.languageFileName = "Chinese"
-            } else if locale == "ja-US"{
+            } else if locale.hasPrefix("ja") {
                 self.languageFileName = "Japanese"
             } else {
                 self.languageFileName = "English"

@@ -128,11 +128,11 @@ class BaseSettingViewController: BaseViewController,ChannelObserver {
     
     
     @IBAction func languageButtonClick(serder: UIButton) {
-        if serder.currentTitle == "中文" {
+        if serder.currentTitle == "中文".localized {
             LanguageManager.shared.switchLanguage("Chinese")
-        } else if serder.currentTitle == "English" {
+        } else if serder.currentTitle == "English".localized {
             LanguageManager.shared.switchLanguage("English")
-        } else if serder.currentTitle == "日本" {
+        } else if serder.currentTitle == "日本".localized {
             LanguageManager.shared.switchLanguage("Japanese")
         } else {
             LanguageManager.shared.switchLanguage("Auto")
